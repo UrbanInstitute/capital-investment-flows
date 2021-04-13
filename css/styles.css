@@ -527,7 +527,7 @@ footer p {
 }
 
 .quintile-dial {
-  background: url(img/meter-bgd.svg) no-repeat top left;
+  background: url(../img/meter-bgd.svg) no-repeat top left;
   display: inline-block;
   max-width: 280px;
   width: 100%;
