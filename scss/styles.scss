@@ -1,0 +1,170 @@
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: #353535;
+}
+
+/******************************************
+* VARIABLES
+*******************************************/
+
+$spacing-unit: 10px;
+$sans-serif: "Lato", sans-serif;
+
+
+/* URBAN COLORS */
+$cyan: #1696D2;
+$gray: #D2D2D2;
+$black: #000000;
+
+$yellow: #FDBF11;
+$magenta: #EC008B;
+
+$space-gray: #5C5859;
+$green: #55B748;
+$red: #DB2B27;
+
+$copy-black: #353535;
+
+/* CYANS */
+$cyan-1: #CFE8F3;
+$cyan-2: #A2D4EC;
+$cyan-3: #73BFE2;
+$cyan-4: #46ABDB;
+$cyan-5: #1696D2;
+$cyan-6: #12719E;
+$cyan-7: #0A4C6A;
+$cyan-8: #062635;
+
+/* GRAYS */
+$gray-1: #F5F5F5;
+$gray-2: #ECECEC;
+$gray-3: #E3E3E3;
+$gray-4: #DCDBDB;
+$gray-5: #D2D2D2;
+$gray-6: #9D9D9D;
+$gray-7: #696969;
+$gray-8: #353535;
+
+/* ORANGE */
+$orange-1: #FFF2CF;
+$orange-2: #FCE39E;
+$orange-3: #FDD870;
+$orange-4: #FCCB41;
+$orange-5: #FDBF11;
+$orange-6: #E88E2D;
+$orange-7: #CA5800;
+$orange-8: #843215;
+
+/* MAGENTAS */
+$magenta-1: #F5CBDF;
+$magenta-2: #EB99C2;
+$magenta-3: #E46AA7;
+$magenta-4: #E54096;
+$magenta-5: #EC008B;
+$magenta-6: #AF1F6B;
+$magenta-7: #761548;
+$magenta-8: #351123;
+
+/* GREENS */
+$green-1: #DCEDD9;
+$green-2: #BCDEB4;
+$green-3: #98CF90;
+$green-4: #78C26D;
+$green-5: #55B748;
+$green-6: #408941;
+$green-7: #2C5C2D;
+$green-8: #1A2E19;
+
+/* SPACE-GRAYS */
+$space-gray-1: #D5D5D4;
+$space-gray-2: #ADABAC;
+$space-gray-3: #848081;
+$space-gray-4: #5C5859;
+$space-gray-5: #332D2F;
+$space-gray-6: #262223;
+$space-gray-7: #1A1717;
+$space-gray-8: #0E0C0D;
+
+/* REDS */
+$red-1: #F8D5D4;
+$red-2: #F1AAA9;
+$red-3: #E9807D;
+$red-4: #E25552;
+$red-5: #DB2B27;
+$red-6: #A4201D;
+$red-7: #6E1614;
+$red-8: #370B0A;
+
+
+@import "header";
+@import "footer";
+
+
+
+body{
+  color: #353535;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  font-size: 100%;
+  line-height: 1.5;
+}
+
+a {
+  color: #1696d2;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 40px 0;
+}
+
+.button {
+  border: 1px solid #000000;
+  color: #000000;
+  cursor: pointer;
+  display: inline;
+  margin: 10px 10px 10px 0;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.date-line {
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+}
+
+.text-wrapper {
+  padding-top: 56px;
+  margin: 0 auto 100px auto;
+  max-width: 1150px;
+  width: 80%;
+}

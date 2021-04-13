@@ -1,0 +1,226 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@urbaninstitute"><meta name="twitter:creator" content="@urbaninstitute"><meta name="twitter:title" content="Building a State Financial Aid Program"><meta name="twitter:description" content="What Are the Trade-Offs of Different Design Choices?"><meta name="twitter:image" content="https://apps.urban.org/features/how-to-build-a-state-financial-aid-program/images/twitter.jpg"><meta property="og:title" content="Building a State Financial Aid Program" /><meta property="og:description" content="What Are the Trade-Offs of Different Design Choices?" /><meta property="og:image" content="https://apps.urban.org/features/how-to-build-a-state-financial-aid-program/images/facebook.jpg" /><meta property="og:image:type" content="image/png"><meta property="og:url" content="http://urbn.is/stateaid">
+
+    <title></title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic,900" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/vendor/jquery-ui.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <script type="application/ld+json">{ "@context": "http://schema.org", "@type": "NewsArticle", "headline": "Building a State Financial Aid Program", "url": "https://apps.urban.org/features/how-to-build-a-state-financial-aid-program", "thumbnailUrl": "https://apps.urban.org/features/how-to-build-a-state-financial-aid-program/images/social.png", "dateCreated": "2020-10-14T04:00:00.000Z", "articleSection": "Interactive Feature", "creator": ["Sandy Baum","Kristin Blagg","Macy Rainer","Allison Feldman","JoElla Carman","Serena Lei","David Hinson"], "keywords": ["Education and Training"] }</script> -->
+  </head>
+  <body>
+    <!-- Google Tag Manager -->
+<!--     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MKBD2W"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MKBD2W');</script> -->
+  <!-- End Google Tag Manager -->
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- START HEADER -->
+    <div id="header-pinned" class="no-touch">
+      <a target="_blank" href="https://www.urban.org/" title="Home" rel="home" class="site-logo"></a>
+      <div class="title">
+        <span class="feature-link"><a href="https://www.urban.org/features" target = "_blank" class="title-linkback" alt="Urban Institute logo">Features</a></span>
+      </div>
+
+    </div>
+    <!-- END HEADER -->
+
+    <div class="text-wrapper">
+      <div class="intro-text">
+        <h1>Gauging Investment Patterns in the US</h1>
+        <h2>How much capital is flowing to your city, county, or state, and how evenly is it distributed across neighborhoods?</h2>
+        <p class="date-line">Month TK, 20TK</p>
+      </div>
+      <div class="content-well">
+
+        <p>
+          Healthy scommunities depend on a steady stream of investment,nrs to thrive. But capital—such as business loans, home mortgages, or financing of apartment buildings and grocery stores—doesn’t flow evenly across cities, counties, and states, nor does it flow evenly across neighborhoods within those places.
+        </p>
+
+        <div id="demo" class="quintile-dial">
+          <?xml version="1.0" encoding="utf-8"?>
+          <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 280 137" style="enable-background:new 0 0 280 137;" xml:space="preserve">
+            <path transform="rotate(0 140 123)" class="needle" d="M141.15,135.81c6.81-0.85,11.65-7.07,10.81-13.89c-0.85-6.82-7.06-11.67-13.88-10.83s-96.91,24.58-96.91,24.58
+              S134.34,136.66,141.15,135.81z"/>
+          </svg>
+        </div>
+
+        <p>
+          Long-standing patterns rooted in racial segregation and discrimination have excluded high-poverty neighborhoods and neighborhoods where many Black, Latinx, and Indigenous people and other people of color live from the access to capital that low-poverty and majority-white neighborhoods enjoy.
+        </p>
+        <p>
+          To explore how much capital is flowing to cities, counties, and states, and how evenly investment is distributed across census tracts within them, we looked at average funding per capita from private, federal, and mission financing sources between 2005 and 2019.
+        </p>
+        <p>
+          Search for your city, county, or state to see how it compares in how much investment it receives and how equitably capital is distributed across neighborhoods with different racial and income demographics.
+        </p>
+      </div>
+    </div>
+
+      <nav id="tabs">
+        <ul>
+          <li class="geo-type selected " data-geo="city">Cities</li>
+          <li class="geo-type " data-geo="county">Counties</li>
+          <li class="geo-type " data-geo="state">States</li>
+        </ul>
+      </nav>
+      <div class="viz-well">
+        <div id="place-search">
+          <label for="dropdown">Search for a <span>city</span></label>
+          <input id="dropdown"></input>
+          <p>TK data are available...</p>
+        </div>
+
+        <p>Click on a category to see how investment compares among other cities/counties/states</p>
+
+        <div id="asset-class-menu">
+          <label for="asset-dropdown">Choose an asset class</label>
+          <input id="asset-dropdown"></input>
+        </div>
+
+        <div class="results-table" id="pctlVolume">
+          <div class="quintile-dial">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 280 137" style="enable-background:new 0 0 280 137;" xml:space="preserve">
+              <path transform="rotate(0 140 123)" class="needle" d="M141.15,135.81c6.81-0.85,11.65-7.07,10.81-13.89c-0.85-6.82-7.06-11.67-13.88-10.83s-96.91,24.58-96.91,24.58
+                S134.34,136.66,141.15,135.81z"/>
+            </svg>
+          </div>
+
+          <h3>Volume</h3>
+          <p>
+            How much investment the <span>city</span> receives per household, housing unit, or employee
+          </p>
+          <table>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+
+        <div class="results-table" id="pctlrace">
+          <div class="quintile-dial">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 280 137" style="enable-background:new 0 0 280 137;" xml:space="preserve">
+              <path transform="rotate(0 140 123)" class="needle" d="M141.15,135.81c6.81-0.85,11.65-7.07,10.81-13.89c-0.85-6.82-7.06-11.67-13.88-10.83s-96.91,24.58-96.91,24.58
+                S134.34,136.66,141.15,135.81z"/>
+            </svg>
+          </div>
+          <h3>Racial Equity Index</h3>
+          <p>
+            How evenly investment is distributed across neighborhoods with different racial demographics
+          </p>
+          <table>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+
+
+        <div class="results-table" id="pctlpov">
+        <div class="quintile-dial">
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 280 137" style="enable-background:new 0 0 280 137;" xml:space="preserve">
+              <path transform="rotate(0 140 123)" class="needle" d="M141.15,135.81c6.81-0.85,11.65-7.07,10.81-13.89c-0.85-6.82-7.06-11.67-13.88-10.83s-96.91,24.58-96.91,24.58
+                S134.34,136.66,141.15,135.81z"/>
+            </svg>
+        </div>
+          <h3>Income Equity Index</h3>
+          <p>
+            How evenly investment is distributed across neighborhoods with different income levels
+          </p>
+          <table>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+
+  <div class="clear">
+
+  </div>
+
+  <footer>
+    <div id="about-the-data" class="content">
+      <h4>About the data</h4>
+
+      <a href="https://datacatalog.urban.org/dataset/racial-and-ethnic-representativeness-us-postsecondary-education-institutions">
+        <div class="button">Download data</div>
+      </a>
+      <p>
+        Facts and lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <h4>Project credits</h4>
+      <div class="urbanstatement"><p>
+        This feature was funded by the Joyce Foundation and Lumina Foundation. We are grateful to them and to all our funders, who make it possible for Urban to advance its mission. The views expressed are those of the authors and should not be attributed to the Urban Institute, its trustees, or its funders. Funders do not determine research findings or the insights and recommendations of our experts. More information on our funding principles is available <a href="https://www.urban.org/support/funding-principles">here</a>. Read our terms of service <a href="https://www.urban.org/terms-service">here</a>.
+      </p></div>
+
+      <h3 class="job">Research</h3><a href=""><span class="employee">First Last</span></a> and <a href=""><span class="employee">First Last</span></a>
+
+      <h3 class="job">Design</h3><span class="employee">First Last</span>
+
+      <h3 class="job">Development</h3><span class="employee">First Last</span>
+
+      <h3 class="job">Editing</h3><span class="employee">First Last</span>
+
+      <div class="credits"><a href="" target="_blank">View this project on GitHub.</a></div>
+
+    </div>
+  </footer>
+
+
+    <!-- START Parse.ly Include: Standard -->
+<!--     <div id="parsely-root" style="display: none">
+      <span id="parsely-cfg" data-parsely-site="urban.org"></span>
+    </div>
+    <script>
+        (function(s, p, d) {
+          var h=d.location.protocol, i=p+"-"+s,
+              e=d.getElementById(i), r=d.getElementById(p+"-root"),
+              u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+              :"static."+p+".com";
+          if (e) return;
+          e = d.createElement(s); e.id = i; e.async = true;
+          e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+        })("script", "parsely", document);
+    </script> -->
+    <!-- END Parse.ly Include: Standard -->
+
+  <script type="text/javascript" src="js/colors.js"></script>
+  <script type="text/javascript" src="js/helpers.js"></script>
+          <script src="js/vendor/jquery-1.9.1-min.js"></script>
+        <script src="js/vendor/jquery-ui.js"></script>
+        <script src="js/vendor/d3.v4.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

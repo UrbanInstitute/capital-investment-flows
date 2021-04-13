@@ -1,0 +1,22 @@
+variable,long_label,theme,short_label
+pctlVolume_agg,Percentile Volume for Aggregate Investment per Household,pctlVolume,Overall
+pctlVolume_SF,Percentile Volume for Single-Family Lending per Owner,pctlVolume,Single-family
+pctlVolume_MF,Percentile Volume for Multifamily Lending per Renter,pctlVolume,Multifamily
+pctlVolume_SB,Percentile Volume for Small Business Lending per Small Business Employee,pctlVolume,Small business
+pctlVolume_mission,Percentile Volume for Mission Lending per Household,pctlVolume,Federal
+pctlVolume_federal,Percentile Volume for Federal Investment per Household,pctlVolume,Mission
+pctlVolume_NonRes,Percentile Volume for Non-Residential Lending per Employee,pctlVolume,Nonresidential
+pctlrace_agg,Percentile Racial Equity for Aggregate Investment per Household,pctlrace,Overall
+pctlrace_SF,Percentile Racial Equity for Single-Family Lending per Owner,pctlrace,Single-family
+pctlrace_MF,Percentile Racial Equity for Multifamily Lending per Renter,pctlrace,Multifamily
+pctlrace_SB,Percentile Racial Equity for Small Business Lending per Small Business Employee,pctlrace,Small business
+pctlrace_mission,Percentile Racial Equity for Mission Investment per Household,pctlrace,Federal
+pctlrace_federal,Percentile Racial Equity for Federal Lending per Household,pctlrace,Mission
+pctlrace_NonRes,Percentile Racial Equity for Non-Residential Lending per Employee,pctlrace,Nonresidential
+pctlpov_agg,Percentile Income Equity for Aggregate Investment per Household,pctlpov,Overall
+pctlpov_SF,Percentile Income Equity for Single-Family Lending per Owner,pctlpov,Single-family
+pctlpov_MF,Percentile Income Equity for Multifamily Lending per Renter,pctlpov,Multifamily
+pctlpov_SB,Percentile Income Equity for Small Business Lending per Small Business Employee,pctlpov,Small business
+pctlpov_mission,Percentile Income Equity for Mission Investment per Household,pctlpov,Federal
+pctlpov_federal,Percentile Income Equity for Federal Lending per Household,pctlpov,Mission
+pctlpov_NonRes,Percentile Income Equity for Non-Residential Lending per Employee,pctlpov,Nonresidential
