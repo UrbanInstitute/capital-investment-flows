@@ -99,22 +99,9 @@ p {
 * DROPDOWN
 *******************************************/
 
-
-.stateSelection {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  margin-bottom: 40px;
-}
-
-.dropdownSection {
-
-  position: relative;
-  right: 0;
-  width: 100%;
-}
-
-#dropdown {
+#combobox {
+  background: url(../img/lookup.png) 96% / 15% no-repeat #ffffff;
+  background-size: auto;
   border: 1px solid #D2D2D2;
   border-radius: 0;
   color: #696969;
@@ -126,7 +113,21 @@ p {
   width: 260px;
 }
 
-#dropdown-button {
+#investment-cat-button {
+  background: url(../img/down-arrow.png) 96% / 15% no-repeat #ffffff;
+  background-size: auto;
+  color: #696969;
+  border: 1px solid #D2D2D2;
+  font-family: Lato;
+  font-size: 16px;
+  width: 260px;
+}
+
+.ui-selectmenu-text {
+  color: #696969;
+}
+
+/*#combobox {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -141,10 +142,16 @@ p {
     font-weight: bold;
     color: #1696d2;
     cursor: pointer;
-    background: url(../img/down-arrow.png) 96% / 15% no-repeat #ffffff;
+
     background-size: auto;
     margin: 0 0 25px 0;
-}
+}*/
+
+/*  .ui-selectmenu-button.ui-button {
+    background: url(../images/blue-dropdown-bg.png) no-repeat right #ffffff;
+    background-size: 30px 20px;
+    width: 100%;
+  }*/
 
 
 /******************************************
@@ -434,7 +441,8 @@ footer .content {
 }
 
 footer li {
-  font-size: 14px;
+  font-size: 20px;
+  padding-bottom: 8px;
 }
 
 
@@ -502,8 +510,12 @@ footer p {
 * CUSTOM
 *******************************************/
 
+label {
+  font-size: 26px;
+  font-weight: 700;
+}
 
-#asset-class-menu {
+.cat-menu {
   display: none;
 }
 
@@ -512,9 +524,11 @@ footer p {
   max-width: 760px;
 }
 
+.pctl-rects {
+  display: none;
+}
+
 #place-search {
-  font-size: 26px;
-  font-weight: 700;
   padding-top: 60px;
 }
 
@@ -527,23 +541,42 @@ footer p {
 }
 
 .quintile-dial {
-  background: url(/img/meter-bgd.svg) no-repeat top left;
+  background: url(../img/meter-bgd.svg) no-repeat top left;
   display: inline-block;
   max-width: 280px;
   width: 100%;
 }
 
 .quintile-dial#demo {
+  font-size: 20px;
   float: right;
   margin-left: 9%; /* 70px/760px */
   max-width: 280px;
 }
 
+.quintile-dial#demo > div {
+  margin-top: 18px;
+  color: #696969;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.quintile-dial#demo > div > span {
+  border-bottom: 2px solid #FDBF11;
+  color: #353535;
+  display: inline-block;
+  font-size: 20px;
+  font-style: normal;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+}
+
 .results-table {
   display: inline-block;
   float: left;
-  margin-right: 6%;
-  width: 29.3%;
+  margin-right: 10%;
+  max-width: 280px;
+  width: 29.33%;
 }
 
 .results-table#pctlpov {
@@ -551,10 +584,11 @@ footer p {
 }
 
 .results-table > h3 {
+  display: inline-block;
   font-size: 30px;
   font-weight: 300;
+  line-height: 1.1;
   margin: 16px 0 6px 0;
-  max-width: 280px;
 }
 
 .results-table > p {
@@ -564,15 +598,15 @@ footer p {
   font-weight: 400;
   line-height: 27px;
   margin: 0 0 24px 0;
-  max-width: 280px;
 }
 
 .results-table > table {
   border-collapse: collapse;
   font-size: 20px;
-  max-width: 280px;
+  table-layout: fixed;
   width: 100%;
 }
+
 
 #tabs > ul {
   border-bottom: 4px solid #D2D2D2;
@@ -581,8 +615,20 @@ footer p {
   padding: 0;
 }
 
-tr.flow-type > td:last-of-type::after {
-  content: 'th percentile';
+tbody > tr > td {
+  cursor: pointer;
+}
+
+thead > tr > td {
+  color: #696969;
+  font-size: 14px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+
+td:last-of-type {
+  text-align: right;
 }
 
 tr.flow-type > td {
@@ -599,6 +645,7 @@ tr.selected > td {
 
 li.geo-type {
   color: #D2D2D2;
+  cursor: pointer;
   display: inline-block;
   font-size: 36px;
   font-weight: 400;
@@ -606,8 +653,9 @@ li.geo-type {
   padding-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
-  width: 33%;
+  width: 33.33%;
 }
+
 
 li.geo-type.selected {
   color: #1696D2;
@@ -616,11 +664,32 @@ li.geo-type.selected {
 
 .needle {
   fill: #353535;
+/*  transform-origin: bottom center;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out*/;
+}
+
+#share-btns {
+  border-top: 1px solid #D2D2D2;
+  padding-top: 28px;
+  margin-top: 28px;
+  text-align: center;
+}
+
+#share-btns > img {
+  margin-right: 16px;
+  width: 24px;
+}
+
+#share-btns > img:last-of-type {
+  margin-right: 0;
 }
 
 .viz-well {
   margin: 0 auto;
   max-width: 1100px;
+  width: 90%;
 }
 
 .viz-well > p {
@@ -633,36 +702,129 @@ li.geo-type.selected {
   tr.flow-type > td:last-of-type::after {
     content: ' ';
   }
+
+  .viz-well {
+    padding-right: 2%;
+    padding-left: 2%;
+  }
+
+  .results-table {
+    margin-right: 6%;
+  }
+
+  .results-table > h3 {
+    height: 66px;
+    vertical-align: bottom;
+  }
+
+  .results-table > p {
+    height: 108px;
+  }
 }
 
-@media (max-width: 900px){
+@media (max-width: 800px){
 
-  #asset-class-menu {
+  .cat-menu {
     display: block;
+  }
+
+  #combobox {
+    font-size: 16px;
+    margin-left: 0;
+    width: 90%;
+  }
+
+  #investment-cat-button {
+    /*TODO something making this not match the other 90%*/
+    width: 93%;
+  }
+
+  footer .content {
+    width: 90%;
+  }
+
+  label {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  li.geo-type {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+
+  li.geo-type.selected {
+    border-bottom: 2px solid #1696D2;
+    margin-bottom: -2px;
+  }
+
+  #place-search > p {
+    display: block;
+    font-size: 15px;
+    margin: 6px 0 18px 0;
+  }
+
+  .pctl-rects {
+    display: inline-block;
+    height: 20px;
+    width: 100%;
+  }
+
+  .quintile-dial {
+    display: none;
+  }
+
+  .quintile-dial#demo {
+    display: inline-block;
+  }
+
+  .text-wrapper {
+    width: 90%;
   }
 
   .results-table {
     display: block;
     float: none;
     margin: 0 auto;
-    width: 90%;
+    max-width: none;
+    width: 100%;
   }
 
   .results-table#pctlpov {
     margin-right: auto;
   }
 
-  .results-table > h3, .results-table > p {
-    max-width: 90%;
-  }
-
   .results-table > table {
     display: none;
   }
 
-  .results-table > .quintile-dial {
+  .results-table > h3 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 24px 0 6px 0;
+  }
+
+  .results-table > p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+  }
+
+  .results-table > h3, .results-table > p {
+    height: auto;
+    max-width: 90%;
+  }
+
+  #tabs > ul {
+    border-bottom: 2px solid #D2D2D2;
+  }
+
+  .viz-well > p {
     display: none;
   }
+
 }
 
 
