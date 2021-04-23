@@ -83,11 +83,14 @@
               S153.08,147.22,153.08,140z"/>
           </svg>
           <div>
-            <span>1&#8211;20th percentile</span><br>
+            <span>1st&#8211;20th percentile</span><br>
             Higher percentiles = larger volume/<br>greater equity
           </div>
         </div>
-
+        <div id="pctl-rect-demo">
+          <svg></svg>
+          <span>Higher percentiles = larger volume/greater equity</span>
+        </div>
         <p>
           Long-standing patterns rooted in racial segregation and discrimination have excluded high-poverty neighborhoods and neighborhoods that are home to many people of color from the access to capital that low-poverty and majority-white neighborhoods enjoy.
         </p>
@@ -109,8 +112,8 @@
         <div id="place-search">
           <label for="combobox">Search for a <span>city</span></label>
           <input id="combobox"></input>
-          <p>Data are available for the 500 largest US cities</p>
         </div>
+        <p class="availability-note">Data are available for the 500 largest US cities</p>
 
         <p>Click on a category to see how investment compares among other <span>cities</span></p>
 
@@ -127,7 +130,7 @@
           </select>
         </div>
         <!-- one way to make the divs even using 33.3% width is to just take out all the white space in the HTML. Sorry it's crappy to work with. -->
-        <div class="results-table" id="pctlVolume"><div class="quintile-dial"><?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 280 154" style="enable-background:new 0 0 280 153;" xml:space="preserve"><path class="needle" d="M153.08,140c0-7.22-5.85-13.08-13.08-13.08S41.66,140,41.66,140s91.12,13.08,98.34,13.08 S153.08,147.22,153.08,140z"/></svg></div><h3>Volume</h3><p>How much investment the <span>city</span> receives per household, housing unit, or employee</p><table><thead></thead><tbody></tbody></table><svg class="pctl-rects"></svg></div><div class="results-table" id="pctlrace"><div class="quintile-dial"><?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 280 154" style="enable-background:new 0 0 280 153;" xml:space="preserve"><path class="needle" d="M153.08,140c0-7.22-5.85-13.08-13.08-13.08S41.66,140,41.66,140s91.12,13.08,98.34,13.08 S153.08,147.22,153.08,140z"/></svg></div><h3>Racial Equity Index</h3><p>How evenly investment is distributed across neighborhoods with different racial and ethnic demographics</p><table><thead></thead><tbody></tbody></table><svg class="pctl-rects"></svg></div><div class="results-table" id="pctlpov"><div class="quintile-dial"><?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 280 154" style="enable-background:new 0 0 280 153;" xml:space="preserve"><path class="needle" d="M140,126.67c6.89,0,12.48,5.82,12.48,13s-5.59,13-12.48,13s-99.52-13-99.52-13S134.29,126.67,141.18,126.67z"/></svg></div><h3>Income Equity Index</h3><p>How evenly investment is distributed across neighborhoods with different poverty levels</p><table><thead></thead><tbody></tbody></table><svg class="pctl-rects"></svg></div></div>
+        <div class="results-table" id="pctlVolume"><div class="quintile-dial"><?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 280 154" style="enable-background:new 0 0 280 153;" xml:space="preserve"><path class="needle" d="M153.08,140c0-7.22-5.85-13.08-13.08-13.08S41.66,140,41.66,140s91.12,13.08,98.34,13.08 S153.08,147.22,153.08,140z"/></svg></div><h3>Volume</h3><p>How much investment the <span>city</span> receives per household, housing unit, or employee</p><table><thead></thead><tbody></tbody></table><svg class="pctl-rects"></svg></div><div class="results-table" id="pctlrace"><div class="quintile-dial"><?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 280 154" style="enable-background:new 0 0 280 153;" xml:space="preserve"><path class="needle" d="M153.08,140c0-7.22-5.85-13.08-13.08-13.08S41.66,140,41.66,140s91.12,13.08,98.34,13.08 S153.08,147.22,153.08,140z"/></svg></div><h3>Racial Equity</h3><p>How evenly investment is distributed across neighborhoods with different racial and ethnic demographics</p><table><thead></thead><tbody></tbody></table><svg class="pctl-rects"></svg></div><div class="results-table" id="pctlpov"><div class="quintile-dial"><?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 280 154" style="enable-background:new 0 0 280 153;" xml:space="preserve"><path class="needle" d="M140,126.67c6.89,0,12.48,5.82,12.48,13s-5.59,13-12.48,13s-99.52-13-99.52-13S134.29,126.67,141.18,126.67z"/></svg></div><h3>Income Equity</h3><p>How evenly investment is distributed across neighborhoods with different poverty levels</p><table><thead></thead><tbody></tbody></table><svg class="pctl-rects"></svg></div></div>
 
 
   <div class="clear">
@@ -137,6 +140,9 @@
   <footer>
     <div id="about-the-data" class="content">
       <h4>About the data</h4>
+            <a href="" target="_blank">
+        <div class="button foot-button">Download data</div>
+      </a>
       <p>
         We analyzed the dollar flows of investments at the neighborhood level (defined here as census tracts) using the following data sources:
           <ul>
@@ -178,7 +184,6 @@
 
       <h3 class="job">Writing</h3><span class="employee">Emily Peiffer</span>
 
-      <div class="credits"><a href="" target="_blank">Download the data on Urban's Data Catalog</a></div>
       <div class="credits"><a href="" target="_blank">View this project on GitHub</a></div>
 
 

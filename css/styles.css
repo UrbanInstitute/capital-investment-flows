@@ -110,7 +110,7 @@ p {
   height: 44px;
   margin-left: 14px;
   padding-left: 16px;
-  width: 260px;
+  width: 340px;
 }
 
 #investment-cat-button {
@@ -528,16 +528,20 @@ label {
   display: none;
 }
 
+#pctl-rect-demo {
+  display: none;
+}
+
 #place-search {
   padding-top: 60px;
 }
 
-#place-search > p {
+.viz-well > p.availability-note {
   color: #9D9D9D;
-  display: inline;
+  display: inline-block;
   font-style: italic;
   font-weight: 400;
-  margin-left: 16px;
+  margin-top: 8px;
 }
 
 .quintile-dial {
@@ -639,8 +643,21 @@ tr.selected {
   border-bottom: 2px solid #FDBF11;
 }
 
-tr.selected > td {
+tr.selected > td, tr.moused > td {
   font-weight: 700;
+}
+
+nav#tabs {
+
+}
+
+nav#tabs.sticky {
+  background-color: #FFFFFF;
+  left: 0;
+  position: fixed;
+  top: 56px;
+  width: 100%;
+  z-index: 2;
 }
 
 li.geo-type {
@@ -698,7 +715,7 @@ li.geo-type.selected {
   margin: 42px 0 28px 0;
 }
 
-@media (max-width: 1150px){
+@media (max-width: 1175px){
   tr.flow-type > td:last-of-type::after {
     content: ' ';
   }
@@ -722,6 +739,20 @@ li.geo-type.selected {
   }
 }
 
+@media (max-width: 900px){
+  .results-table > p {
+    font-size: 16px;
+  }
+
+  .results-table > table {
+    font-size: 16px;
+  }
+
+  tr.flow-type > td {
+    height: 40px;
+  }
+}
+
 @media (max-width: 800px){
 
   .cat-menu {
@@ -735,7 +766,7 @@ li.geo-type.selected {
   }
 
   #investment-cat-button {
-    /*TODO something making this not match the other 90%*/
+    /*something making this not match the other 90%*/
     width: 93%;
   }
 
@@ -753,6 +784,7 @@ li.geo-type.selected {
   li.geo-type {
     font-size: 16px;
     padding-bottom: 10px;
+    padding-top: 12px;
   }
 
   li.geo-type.selected {
@@ -772,12 +804,15 @@ li.geo-type.selected {
     width: 100%;
   }
 
-  .quintile-dial {
-    display: none;
+  #pctl-rect-demo {
+    display: inline-block;
+    height: 60px;
+    margin: 0 auto;
+    width: 90%;
   }
 
-  .quintile-dial#demo {
-    display: inline-block;
+  .quintile-dial {
+    display: none;
   }
 
   .text-wrapper {
@@ -825,6 +860,12 @@ li.geo-type.selected {
     display: none;
   }
 
+}
+
+@media (max-width: 600px){
+  rect.pctl-box {
+    stroke-width: 0.5;
+  }
 }
 
 

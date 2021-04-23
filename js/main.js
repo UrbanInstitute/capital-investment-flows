@@ -12,17 +12,42 @@
   d3.selectAll('.arc').on('mouseenter', function(){
     var num = d3.select(this).attr('data-range')
     var catLabels = {
-      10: '1&#8211;20th percentile',
-      30: '21&#8211;40th percentile',
-      50: '41&#8211;60th percentile',
-      70: '61&#8211;80th percentile',
-      90:'81&#8211;100th percentile'
+      10: '1st&#8211;20th percentile',
+      30: '21st&#8211;40th percentile',
+      50: '41st&#8211;60th percentile',
+      70: '61st&#8211;80th percentile',
+      90:'81st&#8211;100th percentile'
     }
 
     var degrees = +num * (180/100)
     d3.select('#demo > svg > .needle').attr('transform', 'rotate(' + degrees + ' 140 140)')
     d3.select('#demo > div > span').html(catLabels[num])
   })
+
+
+    $(document).on('scroll', function(){
+      stickyNav();
+    })
+
+
+  var NAV_OFFSET_TOP = $('nav').offset().top; //store the value because it becomes fixed at 0 later
+
+  function stickyNav(){
+    if (IS_MOBILE){
+
+      var topNavHeight = $('div.title').outerHeight();
+      var scrollPosition = $(window).scrollTop() + topNavHeight;
+      if ( scrollPosition >= NAV_OFFSET_TOP ){
+        $('nav').addClass('sticky')
+      } else if ( scrollPosition < NAV_OFFSET_TOP ) {
+        $('nav').removeClass('sticky')
+      }
+       if ( scrollPosition >= $('footer').offset().top ){
+        $('nav').removeClass('sticky')
+      }
+    }
+
+  }
 
   function dataReady(error, cityNums, countyNums, stateNums, dict){
 
@@ -78,24 +103,55 @@
     })
 
     $('table').on('click', 'tbody > tr > td', function(evt){
-      SELECTED_MEASURE = this.parentElement.classList[2] //is this bullshit?
-      highlightMeasure();
-      moveNeedle();
+      SELECTED_MEASURE = this.parentElement.classList[2]
+      highlightMeasure('click');
+      moveNeedle('click');
     })
 
+    var PREVIOUS_MEASURE;
+    $('table').on('mouseenter', 'tbody > tr > td', function(evt){
+      PREVIOUS_MEASURE = SELECTED_MEASURE;
+      SELECTED_MEASURE = this.parentElement.classList[2]
+      highlightMeasure('mouseenter');
+      moveNeedle('click');
+    })
 
-    function highlightMeasure(){
-      $('.flow-type').removeClass('selected');
-      $('.' + SELECTED_MEASURE).addClass('selected');
+    $('table').on('mouseleave', 'tbody > tr > td', function(evt){
+
+      if ($(this).parent().hasClass('selected')){
+        SELECTED_MEASURE = this.parentElement.classList[2]
+      } else {
+        SELECTED_MEASURE = PREVIOUS_MEASURE
+      }
+      highlightMeasure('mouseleave');
+      moveNeedle('mouseleave');
+    })
+
+    function highlightMeasure(eventType){
+      if (eventType === 'click'){
+        $('.flow-type').removeClass('selected');
+        $('.' + SELECTED_MEASURE).addClass('selected');
+      } else if (eventType === 'mouseenter'){
+        $('.flow-type').removeClass('moused');
+        $('.' + SELECTED_MEASURE).addClass('moused');
+      } else if (eventType === 'mouseleave'){
+        $('.flow-type').removeClass('moused');
+      }
     }
 
-    function moveNeedle(){
+    function moveNeedle(eventType){
       var selectedLocationInfo = DATASET[GEOG_LEVEL].filter(function(d){
         return d.id === PLACE_ID[GEOG_LEVEL]
       })[0]
 
       var degPerPercentile = 180/100
       for (var i = 0; i < TABLE_NAMES.length; i++){
+        // var percentile;
+        // if ( eventType === 'click' || eventType === 'mouseenter' ){
+        //   percentile = +selectedLocationInfo[TABLE_NAMES[i] + '_' + SELECTED_MEASURE]
+        // } else if ( eventType === 'mouseleave' ){
+        //   percentile = +selectedLocationInfo[TABLE_NAMES[i] + '_' + PREVIOUS_MEASURE]
+        // }
         var percentile = +selectedLocationInfo[TABLE_NAMES[i] + '_' + SELECTED_MEASURE]
         var degrees = degPerPercentile * percentile
 
@@ -119,7 +175,7 @@
         'state': 'Data are available for all 50 states (excluding data from very small counties)'
       }
 
-      d3.select('#place-search > p').text(dataNotes[GEOG_LEVEL]);
+      d3.select('.availability-note').text(dataNotes[GEOG_LEVEL]);
       d3.select('#place-search > label > span').text(GEOG_LEVEL);
       d3.select('div.viz-well > p > span').text(pluralifier[GEOG_LEVEL]);
       d3.select('#pctlVolume > p > span').text(GEOG_LEVEL);
@@ -160,7 +216,7 @@
         var thead = d3.selectAll('#' + d + '> table > thead').append('tr')
 
         thead.selectAll('th')
-          .data(['Investment Category', 'Percentile'])
+          .data(['Category', 'Percentile'])
           .enter()
           .append('td')
           .text(function(d){ return d })
@@ -223,14 +279,65 @@
       })
     }
 
+    function makeDemoPctlRects(){
+      var width = $('#pctl-rect-demo').width(),
+        rectWidth = (width -45) / 100,
+        hundredArray = new Array(100);
+
+      d3.selectAll('#pctl-rect-demo > svg > rect').remove();
+      d3.selectAll('#pctl-rect-demo > svg > text').remove();
+      var svg = d3.select('#pctl-rect-demo > svg')
+        .attr('width', width)
+        .attr('height', 40)
+
+      svg.selectAll('rect')
+        .data(hundredArray)
+          .enter()
+          .append('rect')
+          .attr('width', rectWidth)
+          .attr('height', 20)
+          .attr('class', 'pctl-box')
+          .attr('y', 0)
+          .attr('x', function(d,i){ return i * rectWidth })
+          .attr('stroke-width', 1)
+          .attr('stroke', '#FFFFFF')
+          .attr('fill', function(d,i){
+            if ( i < 21 ){
+              return '#CFE8F3'
+            } else if ( 20 < i && i < 41 ){
+              return '#73BFE2'
+            } else if ( 40 < i && i < 61 ){
+              return '#1696D2'
+            } else if ( 60 < i && i < 81 ){
+              return '#0A4C6A'
+            } else {
+              return '#062635'
+            }
+          })
+
+        var nums = [0,20,40,60,80,100];
+        for (var i = 0; i < nums.length; i++){
+          d3.select('#pctl-rect-demo > svg').append('text')
+            .text(nums[i] + 'th')
+            .attr('x', nums[i] * rectWidth)
+            .attr('y', 40)
+            .attr('class', 'demo-pctl-label')
+        }
+
+    }
+
 
     function init(){
       makeMenu(cityNums);
       makeTables();
-      highlightMeasure();
-      moveNeedle();
+      highlightMeasure('click');
+      moveNeedle('click');
 
       $('#combobox').val(cityNums[0].NAME_E);
+
+      if (IS_MOBILE){
+        makeDemoPctlRects();
+      }
 
     }
 
@@ -243,7 +350,11 @@
 
       if (IS_MOBILE){
         makeTables();
+        makeDemoPctlRects();
       }
+
+      stickyNav();
+
     }
 
   }
