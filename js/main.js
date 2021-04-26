@@ -307,54 +307,6 @@
 
     }
 
-    function makeDemoPctlRects(){
-      var width = $('#pctl-rect-demo').width(),
-        rectWidth = (width -45) / 100,
-        hundredArray = new Array(100);
-
-      d3.selectAll('#pctl-rect-demo > svg > rect').remove();
-      d3.selectAll('#pctl-rect-demo > svg > text').remove();
-      var svg = d3.select('#pctl-rect-demo > svg')
-        .attr('width', width)
-        .attr('height', 40)
-
-      svg.selectAll('rect')
-        .data(hundredArray)
-          .enter()
-          .append('rect')
-          .attr('width', rectWidth)
-          .attr('height', 20)
-          .attr('class', 'pctl-box')
-          .attr('y', 0)
-          .attr('x', function(d,i){ return i * rectWidth })
-          .attr('stroke-width', 1)
-          .attr('stroke', '#FFFFFF')
-          .attr('fill', function(d,i){
-            if ( i < 21 ){
-              return '#CFE8F3'
-            } else if ( 20 < i && i < 41 ){
-              return '#73BFE2'
-            } else if ( 40 < i && i < 61 ){
-              return '#1696D2'
-            } else if ( 60 < i && i < 81 ){
-              return '#0A4C6A'
-            } else {
-              return '#062635'
-            }
-          })
-
-        var nums = [0,20,40,60,80,100];
-        for (var i = 0; i < nums.length; i++){
-          d3.select('#pctl-rect-demo > svg').append('text')
-            .text(nums[i] + 'th')
-            .attr('x', nums[i] * rectWidth)
-            .attr('y', 40)
-            .attr('class', 'demo-pctl-label')
-        }
-
-    }
-
-
     function init(){
       makeMenu(cityNums);
       makeTables();
@@ -362,10 +314,6 @@
       moveNeedle('click');
 
       $('#combobox').val(cityNums[0].NAME_E);
-
-      if (IS_MOBILE){
-        makeDemoPctlRects();
-      }
 
     }
 
