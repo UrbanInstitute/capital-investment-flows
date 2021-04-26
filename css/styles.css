@@ -643,6 +643,10 @@ tr.selected {
   border-bottom: 2px solid #FDBF11;
 }
 
+tr.selected > td, tr.moused {
+  border-bottom: 2px solid #FDBF11;
+}
+
 tr.selected > td, tr.moused > td {
   font-weight: 700;
 }
@@ -658,6 +662,10 @@ nav#tabs.sticky {
   top: 56px;
   width: 100%;
   z-index: 2;
+}
+
+.mobile-caption {
+  display: none;
 }
 
 li.geo-type {
@@ -792,6 +800,21 @@ li.geo-type.selected {
     margin-bottom: -2px;
   }
 
+  .mobile-caption {
+    color: #696969;
+    display: inline;
+    font-size: 14px;
+    font-style: italic;
+
+  }
+
+  .mobile-caption > img {
+    left: 4px;
+    position: relative;
+    top: 2px;
+    width: 95px;
+  }
+
   #place-search > p {
     display: block;
     font-size: 15px;
@@ -801,6 +824,7 @@ li.geo-type.selected {
   .pctl-rects {
     display: inline-block;
     height: 20px;
+    margin-bottom: -3px;
     width: 100%;
   }
 

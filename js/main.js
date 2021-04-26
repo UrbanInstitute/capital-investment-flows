@@ -202,6 +202,7 @@
       })[0]
 
       d3.selectAll('tr').remove();
+      d3.selectAll('.mobile-caption').remove();
 
       TABLE_NAMES.forEach(function(d){
 
@@ -269,14 +270,41 @@
               return '#062635'
             }
           })
+
+        var legendText = {
+          'pctlVolume': 'More investment ',
+          'pctlrace': 'More equitable investment ',
+          'pctlpov': 'More equitable investment '
+        }
+        d3.select('#' + d ).append('figcaption')
+          .text(legendText[d])
+          .attr('class', 'mobile-caption')
+          .append('img')
+          .attr('src', 'img/arrow.png')
+          .attr('class', 'mobile-caption')
+
         d3.select('#' + d + '> .pctl-rects')
           .append('text')
           .attr('class', 'pctl-label')
-          .text(score + 'th percentile')
+          .text(function(){
+            var finalDigit = score.toString().split('').pop(),
+              ordinal;
+            if (finalDigit === '1'){
+              ordinal = 'st'
+            } else if (finalDigit === '2'){
+              ordinal = 'nd'
+            } else if (finalDigit === '3'){
+              ordinal = 'rd'
+            } else {
+              ordinal = 'th'
+            }
+            return score + ordinal + ' percentile'
+          })
           .attr('x', rectWidth * score + 10)
           .attr('y', 15)
-
       })
+
+
     }
 
     function makeDemoPctlRects(){
