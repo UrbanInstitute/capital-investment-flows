@@ -25,13 +25,11 @@
   })
 
 
-    $(document).on('scroll', function(){
-      stickyNav();
-    })
-
+  $(document).on('scroll', function(){
+    stickyNav();
+  })
 
   var NAV_OFFSET_TOP = $('nav').offset().top; //store the value because it becomes fixed at 0 later
-
   function stickyNav(){
     if (IS_MOBILE){
 
@@ -46,7 +44,6 @@
         $('nav').removeClass('sticky')
       }
     }
-
   }
 
   function dataReady(error, cityNums, countyNums, stateNums, dict){
@@ -54,17 +51,12 @@
     var GEOG_LEVEL = 'city'; //city, county, state
     var DATASET = cityNums;
     var TABLE_NAMES = ['pctlVolume', 'pctlrace', 'pctlpov']; //also in HTML
-    var SELECTED_MEASURE = 'SF';
+    var SELECTED_MEASURE = 'agg';
+    //defaults are just what's at the top of the datasheet
     var PLACE_ID = {
       'city': cityNums[0].id,
       'county': countyNums[0].id,
       'state': stateNums[0].id
-    }
-
-    var PLACE_NAME = {
-      'city': cityNums[0].NAME_E,
-      'county': countyNums[0].NAME_E,
-      'state': stateNums[0].NAME_E
     }
 
     var PLACE_NAME = {
@@ -101,6 +93,11 @@
       highlightMeasure();
       updateText();
     })
+    //https://stackoverflow.com/questions/5643767/jquery-ui-autocomplete-width-not-set-correctly
+    jQuery.ui.autocomplete.prototype._resizeMenu = function () {
+      var ul = this.menu.element;
+      ul.outerWidth(this.element.outerWidth());
+    }
 
     $('table').on('click', 'tbody > tr > td', function(evt){
       SELECTED_MEASURE = this.parentElement.classList[2]
@@ -128,14 +125,14 @@
     })
 
     function highlightMeasure(eventType){
-      if (eventType === 'click'){
-        $('.flow-type').removeClass('selected');
-        $('.' + SELECTED_MEASURE).addClass('selected');
-      } else if (eventType === 'mouseenter'){
+     if (eventType === 'mouseenter'){
         $('.flow-type').removeClass('moused');
         $('.' + SELECTED_MEASURE).addClass('moused');
       } else if (eventType === 'mouseleave'){
         $('.flow-type').removeClass('moused');
+      } else {
+        $('.flow-type').removeClass('selected');
+        $('.' + SELECTED_MEASURE).addClass('selected');
       }
     }
 
@@ -159,7 +156,6 @@
           // .style('transform', 'rotate(' + degrees + 'deg)')
           .attr('transform', 'rotate(' + degrees + ' 140 140)')
       }
-
     }
 
     function updateText(){
@@ -195,6 +191,10 @@
           }
       })
     }
+
+    $('#combobox').focusout(function(){
+      $(this).val(PLACE_NAME[GEOG_LEVEL]);
+    })
 
     function makeTables(){
       var place = DATASET[GEOG_LEVEL].filter(function(onePlace){
@@ -272,9 +272,9 @@
           })
 
         var legendText = {
-          'pctlVolume': 'More investment ',
-          'pctlrace': 'More equitable investment ',
-          'pctlpov': 'More equitable investment '
+          'pctlVolume': 'Larger volume ',
+          'pctlrace': 'Greater equity ',
+          'pctlpov': 'Greater equity '
         }
         d3.select('#' + d ).append('figcaption')
           .text(legendText[d])
@@ -315,6 +315,11 @@
 
       $('#combobox').val(cityNums[0].NAME_E);
 
+      if (IS_MOBILE) {
+        $('#investment-cat').val(SELECTED_MEASURE);
+        $('#investment-cat').selectmenu('refresh');
+      }
+
     }
 
     init();
@@ -323,14 +328,13 @@
 
     function resize(){
       IS_MOBILE = $(window).width() < 800 ? true : false;
-
       if (IS_MOBILE){
         makeTables();
-        makeDemoPctlRects();
+        $('#investment-cat').val(SELECTED_MEASURE);
+        $('#investment-cat').selectmenu('refresh');
       }
-
       stickyNav();
-
+      highlightMeasure();
     }
 
   }

@@ -511,7 +511,7 @@ footer p {
 *******************************************/
 
 label {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: 700;
 }
 
@@ -552,6 +552,7 @@ label {
 }
 
 .quintile-dial#demo {
+  background: none;
   font-size: 20px;
   float: right;
   margin-left: 9%; /* 70px/760px */
@@ -606,7 +607,7 @@ label {
 
 .results-table > table {
   border-collapse: collapse;
-  font-size: 20px;
+  font-size: 18px;
   table-layout: fixed;
   width: 100%;
 }
@@ -636,7 +637,7 @@ td:last-of-type {
 }
 
 tr.flow-type > td {
-  height: 48px;
+  height: 40px;
 }
 
 tr.selected {
@@ -719,7 +720,7 @@ li.geo-type.selected {
 
 .viz-well > p {
   color: #696969;
-  font-size: 22px;
+  font-size: 18px;
   margin: 42px 0 28px 0;
 }
 
@@ -882,6 +883,10 @@ li.geo-type.selected {
 
   .viz-well > p {
     display: none;
+  }
+
+  .viz-well > p.availability-note {
+    font-size: 16px;
   }
 
 }
