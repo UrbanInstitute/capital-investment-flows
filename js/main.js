@@ -52,7 +52,9 @@
     var DATASET = cityNums;
     var TABLE_NAMES = ['pctlVolume', 'pctlrace', 'pctlpov']; //also in HTML
     var SELECTED_MEASURE = 'agg';
+
     //defaults are just what's at the top of the datasheet
+
     var PLACE_ID = {
       'city': cityNums[0].id,
       'county': countyNums[0].id,
