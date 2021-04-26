@@ -54,7 +54,7 @@
     var GEOG_LEVEL = 'city'; //city, county, state
     var DATASET = cityNums;
     var TABLE_NAMES = ['pctlVolume', 'pctlrace', 'pctlpov']; //also in HTML
-    var SELECTED_MEASURE = 'SF';
+    var SELECTED_MEASURE = 'agg';
     var PLACE_ID = {
       'city': cityNums[0].id,
       'county': countyNums[0].id,
