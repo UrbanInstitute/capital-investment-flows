@@ -108,9 +108,8 @@ p {
   font-family: Lato;
   font-size: 20px;
   height: 44px;
-  margin-left: 14px;
   padding-left: 16px;
-  width: 340px;
+  width: 550px;
 }
 
 #investment-cat-button {
@@ -511,8 +510,7 @@ footer p {
 *******************************************/
 
 label {
-  font-size: 22px;
-  font-weight: 700;
+  display: none;
 }
 
 .cat-menu {
@@ -534,16 +532,16 @@ label {
 
 #place-search {
   padding-top: 60px;
+  text-align: center;
 }
 
 .viz-well > p.availability-note {
   color: #9D9D9D;
-  display: inline-block;
-  font-size: 16px;
+  display: block;
   font-style: italic;
   font-weight: 400;
-/*  margin-left: 178px;*/
-  margin-top: 8px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .quintile-dial {
@@ -555,9 +553,9 @@ label {
 
 .quintile-dial#demo {
   background: none;
+  display: block;
   font-size: 20px;
-  float: right;
-  margin-left: 9%; /* 70px/760px */
+  margin: 80px auto 0 auto;
   max-width: 280px;
 }
 
@@ -723,7 +721,8 @@ li.geo-type.selected {
 .viz-well > p {
   color: #696969;
   font-size: 18px;
-  margin: 8px 0 28px 0;
+  margin: 8px 0 42px 0;
+  text-align: center;
 }
 
 @media (max-width: 1175px){
@@ -821,10 +820,15 @@ li.geo-type.selected {
     width: 95px;
   }
 
+  #place-search {
+    text-align: left;
+  }
+
   #place-search > p {
     display: block;
     font-size: 15px;
     margin: 6px 0 18px 0;
+    text-align: left;
   }
 
   .pctl-rects {
@@ -892,6 +896,7 @@ li.geo-type.selected {
 
   .viz-well > p.availability-note {
     margin-left: 0;
+    text-align: left;
   }
 
 }

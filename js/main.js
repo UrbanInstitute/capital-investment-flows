@@ -11,17 +11,9 @@
 
   d3.selectAll('.arc').on('mouseenter', function(){
     var num = d3.select(this).attr('data-range')
-    var catLabels = {
-      10: '1st&#8211;20th percentile',
-      30: '21st&#8211;40th percentile',
-      50: '41st&#8211;60th percentile',
-      70: '61st&#8211;80th percentile',
-      90:'81st&#8211;100th percentile'
-    }
 
     var degrees = +num * (180/100)
     d3.select('#demo > svg > .needle').attr('transform', 'rotate(' + degrees + ' 140 140)')
-    d3.select('#demo > div > span').html(catLabels[num])
   })
 
 
