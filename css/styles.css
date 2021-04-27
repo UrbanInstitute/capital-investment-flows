@@ -539,8 +539,10 @@ label {
 .viz-well > p.availability-note {
   color: #9D9D9D;
   display: inline-block;
+  font-size: 16px;
   font-style: italic;
   font-weight: 400;
+/*  margin-left: 178px;*/
   margin-top: 8px;
 }
 
@@ -721,7 +723,7 @@ li.geo-type.selected {
 .viz-well > p {
   color: #696969;
   font-size: 18px;
-  margin: 42px 0 28px 0;
+  margin: 8px 0 28px 0;
 }
 
 @media (max-width: 1175px){
@@ -739,11 +741,14 @@ li.geo-type.selected {
   }
 
   .results-table > h3 {
-    height: 66px;
     vertical-align: bottom;
   }
 
-  .results-table > p {
+
+}
+
+@media (max-width: 1025px){
+    .results-table > p {
     height: 108px;
   }
 }
@@ -886,7 +891,7 @@ li.geo-type.selected {
   }
 
   .viz-well > p.availability-note {
-    font-size: 16px;
+    margin-left: 0;
   }
 
 }

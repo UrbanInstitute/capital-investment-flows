@@ -32,7 +32,6 @@
   var NAV_OFFSET_TOP = $('nav').offset().top; //store the value because it becomes fixed at 0 later
   function stickyNav(){
     if (IS_MOBILE){
-
       var topNavHeight = $('div.title').outerHeight();
       var scrollPosition = $(window).scrollTop() + topNavHeight;
       if ( scrollPosition >= NAV_OFFSET_TOP ){
@@ -43,6 +42,8 @@
        if ( scrollPosition >= $('footer').offset().top ){
         $('nav').removeClass('sticky')
       }
+    } else {
+      $('nav').removeClass('sticky')
     }
   }
 
@@ -94,6 +95,12 @@
       moveNeedle();
       highlightMeasure();
       updateText();
+      // if (!IS_MOBILE){
+      //   var leftOffset = $('#place-search > input').offset().left - $('.viz-well').offset().left;
+      //   $('.viz-well > p.availability-note').css('margin-left', leftOffset);
+      // } else {
+      //   $('.viz-well > p.availability-note').css('margin-left', 0);
+      // }
     })
     //https://stackoverflow.com/questions/5643767/jquery-ui-autocomplete-width-not-set-correctly
     jQuery.ui.autocomplete.prototype._resizeMenu = function () {
