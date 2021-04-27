@@ -531,7 +531,6 @@ label {
 }
 
 #place-search {
-  padding-top: 60px;
   text-align: center;
 }
 
@@ -722,6 +721,11 @@ li.geo-type.selected {
   color: #696969;
   font-size: 18px;
   margin: 8px 0 42px 0;
+}
+
+.viz-well > p.use-note {
+  margin: 42px auto;
+  max-width: 760px;
   text-align: center;
 }
 
@@ -821,6 +825,7 @@ li.geo-type.selected {
   }
 
   #place-search {
+    padding-top: 60px;
     text-align: left;
   }
 

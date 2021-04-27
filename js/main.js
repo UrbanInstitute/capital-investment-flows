@@ -174,7 +174,7 @@
 
       d3.select('.availability-note').text(dataNotes[GEOG_LEVEL]);
       d3.select('#place-search > label > span').text(GEOG_LEVEL);
-      d3.select('div.viz-well > p > span').text(pluralifier[GEOG_LEVEL]);
+      d3.select('div.viz-well > p.use-note > b > span').text(pluralifier[GEOG_LEVEL]);
       d3.select('#pctlVolume > p > span').text(GEOG_LEVEL);
     }
 
