@@ -309,6 +309,8 @@
     }
 
     function init(){
+      IS_MOBILE = document.body.clientWidth < 800 ? true : false;
+      console.log(IS_MOBILE)
       makeMenu(cityNums);
       makeTables();
       highlightMeasure('click');

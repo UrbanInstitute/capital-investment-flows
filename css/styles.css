@@ -746,12 +746,10 @@ li.geo-type.selected {
   .results-table > h3 {
     vertical-align: bottom;
   }
-
-
 }
 
 @media (max-width: 1025px){
-    .results-table > p {
+  .results-table > p {
     height: 108px;
   }
 }
