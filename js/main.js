@@ -160,10 +160,10 @@
     }
 
     function updateText(){
-      var pluralifier = {
-        'city': 'cities',
-        'county': 'counties',
-        'state': 'states'
+      var useNote = {
+        'city': 'Search for a city to see how its investment patterns compare with other cities',
+        'county': 'Search for a county to see how its investment patterns compare with other counties',
+        'state': 'Search for a state to see how its investment patterns compare with other states'
       }
 
       var dataNotes = {
@@ -174,7 +174,7 @@
 
       d3.select('.availability-note').text(dataNotes[GEOG_LEVEL]);
       d3.select('#place-search > label > span').text(GEOG_LEVEL);
-      d3.select('div.viz-well > p.use-note > b > span').text(pluralifier[GEOG_LEVEL]);
+      d3.select('div.viz-well > p.use-note > b').text(useNote[GEOG_LEVEL]);
       d3.select('#pctlVolume > p > span').text(GEOG_LEVEL);
     }
 

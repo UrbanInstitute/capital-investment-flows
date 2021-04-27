@@ -106,8 +106,8 @@ p {
   border-radius: 0;
   color: #696969;
   font-family: Lato;
-  font-size: 20px;
-  height: 44px;
+  font-size: 26px;
+  height: 52px;
   padding-left: 16px;
   width: 550px;
 }
@@ -720,7 +720,7 @@ li.geo-type.selected {
 .viz-well > p {
   color: #696969;
   font-size: 18px;
-  margin: 8px 0 42px 0;
+/*  margin: 8px 0 42px 0;*/
 }
 
 .viz-well > p.use-note {
@@ -776,13 +776,14 @@ li.geo-type.selected {
 
   #combobox {
     font-size: 16px;
+    height: 42px;
     margin-left: 0;
     width: 90%;
   }
 
   #investment-cat-button {
     /*something making this not match the other 90%*/
-    width: 93%;
+    width: 95%;
   }
 
   footer .content {
