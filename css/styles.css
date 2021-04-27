@@ -17,7 +17,7 @@ a {
 h1 {
   font-size: 48px;
   margin: 0;
-  padding-top: 80px;
+  padding-top: 30px;
   text-align: center;
 }
 
@@ -104,7 +104,7 @@ p {
   background-size: auto;
   border: 1px solid #D2D2D2;
   border-radius: 0;
-  color: #696969;
+  color: #353535;
   font-family: Lato;
   font-size: 26px;
   height: 52px;
@@ -123,7 +123,7 @@ p {
 }
 
 .ui-selectmenu-text {
-  color: #696969;
+  color: #353535;
 }
 
 /*#combobox {
@@ -546,7 +546,7 @@ label {
 .quintile-dial {
   background: url(../img/meter-bgd.svg) no-repeat top left;
   display: inline-block;
-  max-width: 280px;
+  /*max-width: 280px;*/
   width: 100%;
 }
 
@@ -578,9 +578,8 @@ label {
 .results-table {
   display: inline-block;
   float: left;
-  margin-right: 10%;
-  max-width: 280px;
-  width: 29.33%;
+  margin-right: 8%;
+  width: 28%;
 }
 
 .results-table#pctlpov {
@@ -589,7 +588,7 @@ label {
 
 .results-table > h3 {
   display: inline-block;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 300;
   line-height: 1.1;
   margin: 16px 0 6px 0;
@@ -672,10 +671,10 @@ li.geo-type {
   color: #D2D2D2;
   cursor: pointer;
   display: inline-block;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 400;
   margin-bottom: -4px;
-  padding-bottom: 20px;
+  padding-bottom: 12px;
   text-align: center;
   text-transform: uppercase;
   width: 33.33%;
@@ -714,7 +713,7 @@ li.geo-type.selected {
 .viz-well {
   margin: 0 auto;
   max-width: 1100px;
-  width: 90%;
+  width: 80%;
 }
 
 .viz-well > p {
@@ -730,6 +729,12 @@ li.geo-type.selected {
 }
 
 @media (max-width: 1175px){
+
+  footer {
+    margin-top: 60px;
+  }
+
+
   tr.flow-type > td:last-of-type::after {
     content: ' ';
   }
@@ -739,22 +744,27 @@ li.geo-type.selected {
     padding-left: 2%;
   }
 
-  .results-table {
-    margin-right: 6%;
-  }
-
   .results-table > h3 {
     vertical-align: bottom;
   }
 }
 
-@media (max-width: 1025px){
+@media (max-width: 1200px){
   .results-table > p {
     height: 108px;
   }
 }
 
-@media (max-width: 900px){
+
+@media (max-width: 1015px){
+  .results-table > p {
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 950px){
   .results-table > p {
     font-size: 16px;
   }
@@ -768,7 +778,11 @@ li.geo-type.selected {
   }
 }
 
-@media (max-width: 800px){
+@media (max-width: 830px){
+
+  p {
+    font-size: 18px;
+  }
 
   .cat-menu {
     display: block;
@@ -783,7 +797,26 @@ li.geo-type.selected {
 
   #investment-cat-button {
     /*something making this not match the other 90%*/
-    width: 95%;
+    width: 93%;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 1.3;
+    padding-top: 80px;
+  }
+
+  footer {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+
+  footer li {
+    font-size: 18px;
+  }
+
+  footer p {
+    font-size: 18px;
   }
 
   footer .content {
@@ -798,7 +831,7 @@ li.geo-type.selected {
   }
 
   li.geo-type {
-    font-size: 16px;
+    font-size: 22px;
     padding-bottom: 10px;
     padding-top: 12px;
   }
@@ -808,15 +841,19 @@ li.geo-type.selected {
     margin-bottom: -2px;
   }
 
+  .employee {
+    font-size: 18px;
+  }
+
   .mobile-caption {
-    color: #696969;
+    color: #9D9D9D;
     display: inline;
     font-size: 14px;
     font-style: italic;
-
   }
 
   .mobile-caption > img {
+    opacity: 0.6;
     left: 4px;
     position: relative;
     top: 2px;
@@ -824,7 +861,7 @@ li.geo-type.selected {
   }
 
   #place-search {
-    padding-top: 60px;
+    padding-top: 30px;
     text-align: left;
   }
 
@@ -853,6 +890,10 @@ li.geo-type.selected {
     display: none;
   }
 
+  .quintile-dial#demo {
+    display: none;
+  }
+
   .text-wrapper {
     width: 90%;
   }
@@ -876,11 +917,12 @@ li.geo-type.selected {
   .results-table > h3 {
     font-size: 18px;
     font-weight: 400;
-    margin: 24px 0 6px 0;
+    margin: 40px 0 6px 0;
   }
 
   .results-table > p {
-    font-size: 15px;
+    font-size: 16px;
+    font-style: normal;
     line-height: 1.5;
     margin: 0 0 12px 0;
   }
@@ -894,11 +936,17 @@ li.geo-type.selected {
     border-bottom: 2px solid #D2D2D2;
   }
 
+  .viz-well {
+    width: 90%;
+  }
+
   .viz-well > p {
     display: none;
   }
 
   .viz-well > p.availability-note {
+    font-size: 15px;
+    margin-bottom: 30px;
     margin-left: 0;
     text-align: left;
   }
@@ -906,6 +954,11 @@ li.geo-type.selected {
 }
 
 @media (max-width: 600px){
+
+  li.geo-type {
+    font-size: 16px;
+  }
+
   rect.pctl-box {
     stroke-width: 0.5;
   }
