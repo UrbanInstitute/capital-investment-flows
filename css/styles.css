@@ -424,12 +424,13 @@ p {
 *******************************************/
 
 footer {
-  margin-top: 80px;
-  position: relative;
-  padding-bottom: 120px;
   bottom: 0;
-  overflow: hidden;
   height: auto;
+  font-size: 20px;
+  margin-top: 80px;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
 }
 
 footer .content {
@@ -465,10 +466,6 @@ footer p {
   margin: 24px 0;
 }
 
-.credits{
-  font-style: italic;
-}
-
 .download {
   background-color: #f1f2f2;
   border: 1px solid #000000;
@@ -480,10 +477,13 @@ footer p {
   vertical-align: middle;
 }
 
-.credits {
-    margin-top: 32px;
-    margin-bottom: 16px;
+.gh{
+  font-style: italic;
+  font-size: 16px;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
+
 
 .job {
   font-size: 20px;
@@ -579,6 +579,7 @@ label {
   display: inline-block;
   float: left;
   margin-right: 8%;
+  max-width: 294px;
   width: 28%;
 }
 
@@ -723,6 +724,7 @@ li.geo-type.selected {
 }
 
 .viz-well > p.use-note {
+  color: #353535;
   margin: 42px auto;
   max-width: 760px;
   text-align: center;
