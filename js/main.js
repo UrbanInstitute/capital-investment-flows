@@ -169,7 +169,7 @@
       var dataNotes = {
         'city': 'Data are available for the 500 largest US cities',
         'county': 'Data are available for the 500 largest US counties',
-        'state': 'Data are available for all 50 states (excluding data from very small counties)'
+        'state': 'Data are available for all 50 states and Washington, DC'
       }
 
       d3.select('.availability-note').text(dataNotes[GEOG_LEVEL]);

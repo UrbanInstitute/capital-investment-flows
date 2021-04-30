@@ -1,6 +1,6 @@
-﻿NAME_E,id,pctlVolume_agg,pctlVolume_SF,pctlVolume_MF,pctlVolume_SB,pctlVolume_mission,pctlVolume_federal,pctlVolume_NonRes,pctlrace_agg,pctlrace_SF,pctlrace_MF,pctlrace_SB,pctlrace_mission,pctlrace_federal,pctlrace_NonRes,pctlpov_agg,pctlpov_SF,pctlpov_MF,pctlpov_mission,pctlpov_federal,pctlpov_NonRes,pctlpov_SB
-"Los Angeles County, CA",06037,100,100,100,100,100,100,100,95,93,95,87,95,90,93,18,19,96,88,75,88,32
+NAME_E,id,pctlVolume_agg,pctlVolume_SF,pctlVolume_MF,pctlVolume_SB,pctlVolume_mission,pctlVolume_federal,pctlVolume_NonRes,pctlrace_agg,pctlrace_SF,pctlrace_MF,pctlrace_SB,pctlrace_mission,pctlrace_federal,pctlrace_NonRes,pctlpov_agg,pctlpov_SF,pctlpov_MF,pctlpov_mission,pctlpov_federal,pctlpov_NonRes,pctlpov_SB
 "Cook County, IL",17031,100,100,100,100,100,100,100,91,96,95,88,98,86,96,36,57,77,94,64,86,21
+"Los Angeles County, CA",06037,100,100,100,100,100,100,100,95,93,95,87,95,90,93,18,19,96,88,75,88,32
 "Harris County, TX",48201,100,100,100,100,100,100,100,96,97,92,93,87,86,92,9,7,81,66,63,66,25
 "Maricopa County, AZ",04013,100,100,100,100,100,100,100,97,98,96,96,88,85,98,13,9,90,72,55,74,30
 "San Diego County, CA",06073,100,100,100,100,100,100,100,93,95,98,92,94,90,89,6,13,99,87,74,72,22

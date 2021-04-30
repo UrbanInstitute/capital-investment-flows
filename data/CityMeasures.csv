@@ -1,8 +1,8 @@
 NAME_E,id,pctlVolume_agg,pctlVolume_SF,pctlVolume_MF,pctlVolume_SB,pctlVolume_mission,pctlVolume_federal,pctlVolume_NonRes,pctlrace_agg,pctlrace_SF,pctlrace_MF,pctlrace_SB,pctlrace_mission,pctlrace_federal,pctlrace_NonRes,pctlpov_agg,pctlpov_SF,pctlpov_MF,pctlpov_mission,pctlpov_federal,pctlpov_NonRes,pctlpov_SB
+"Chicago, IL",1714000,100,100,100,100,100,100,100,50,75,77,49,85,32,28,46,31,5,80,37,45,26
 "Milwaukee, WI",5553000,86,74,94,92,96,98,90,16,26,45,25,60,78,38,88,75,22,73,91,52,62
 "New York, NY",3651000,100,100,100,100,100,100,100,26,45,55,37,63,52,32,69,51,41,74,41,81,66
 "Los Angeles, CA",0644000,100,100,100,100,100,100,100,79,90,84,64,67,75,56,30,15,46,81,79,86,39
-"Chicago, IL",1714000,100,100,100,100,100,100,100,50,75,77,49,85,32,28,46,31,5,80,37,45,26
 "Houston, TX",4835000,100,99,100,100,99,99,100,62,74,28,58,21,29,34,36,27,24,27,41,48,31
 "Phoenix, AZ",0455000,99,99,98,99,95,94,100,78,86,47,79,38,53,40,37,28,43,46,39,49,41
 "Philadelphia, PA",4260000,98,97,99,98,95,96,98,43,58,79,43,38,44,12,70,54,9,52,55,71,59
