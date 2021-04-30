@@ -579,7 +579,7 @@ label {
   display: inline-block;
   float: left;
   margin-right: 8%;
-  max-width: 294px;
+/*  max-width: 294px;*/
   width: 28%;
 }
 
@@ -729,6 +729,14 @@ li.geo-type.selected {
   max-width: 760px;
   text-align: center;
 }
+
+@media (min-width: 1320px){
+  .results-table > p {
+    height: 81px;
+  }
+}
+
+
 
 @media (max-width: 1175px){
 
