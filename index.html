@@ -71,7 +71,7 @@
       <div class="intro-text">
         <h1>Gauging Investment Patterns across the US</h1>
         <h2>How much capital is flowing to your city, county, or state, and how evenly is it distributed across neighborhoods?</h2>
-        <p class="date-line">Month TK, 20TK</p>
+        <p class="date-line">May 20, 2021</p>
         <div id="share-btns" class="content-well">
           <img src="img/icon-twitter.png" alt="Share via Twitter">
           <img src="img/icon-facebook.png" alt="Share via Facebook">
@@ -101,7 +101,8 @@
         </ul>
       </nav>
       <div class="viz-well">
-        <p class="use-note"><b>Search for a city to see how its investment patterns compare among other cities</b><br>Higher percentiles = larger volume/greater equity</p>
+        <p class="use-note"><b>Search for a city to see how its investment patterns compare with those of other cities</b></p>
+        <p class="ptile-note">Higher percentiles = larger volume/greater equity</p>
         <div id="place-search">
           <label for="combobox">Search for a <span>city</span></label>
           <input id="combobox"></input>
@@ -137,23 +138,23 @@
       <p>
         We analyzed the dollar flows of investments at the neighborhood level (defined here as census tracts) using the following data sources:
           <ul>
-            <li><b>Single-family:</b> Purchase loans for owner-occupied single-family properties of one to four units, as reported by Home Mortgage Disclosure Act data for 2005–19. We scale single-family investment by the number of owner-occupied households so we can make apples-to-apples comparisons across places and across neighborhoods within a place. </li>
-            <li><b>Multifamily:</b> Purchase loans for multifamily properties of five or more units, as reported by Home Mortgage Disclosure Act data for 2005–19. We scale multifamily investment by the number of renter-occupied households living in properties with five or more units. </li>
-            <li><b>Nonresidential:</b> Loans for nonresidential real estate (e.g., commercial, industrial, and agricultural properties), as tracked by CoreLogic for 2005–18. We scale nonresidential investment by the number of employees working in the area. </li>
-            <li><b>Small business:</b> Small business loans, as measured by loans to businesses with revenues below $1 million, reported by bank lenders pursuant to Community Reinvestment Act requirements for 2005–19 and as measured by Small Business Administration guaranteed lending through the 7(a) and 504 programs. We scale small business investment by the number of small business employees. </li>
-            <li><b>Mission:</b> “Mission lending” reported by community development financial institutions (CDFIs) and other socially motivated lenders, compiled from various data sources including transaction- level reports from the CDFI Fund, data reported to the Opportunity Finance Network, and mission loans identified in CoreLogic datasets, as well as investments under the New Markets Tax Credit program; data are for 2005–18. We scale mission investment by the number of households. </li>
-            <li><b>Federal:</b> Federal community development funding including HUD HOME, CDBG, Section 108, Choice Neighborhoods, and HOPE VI Public and Indian Housing and Main Street grants; Low-Income Housing Tax Credit investments; and EPA brownfields and brownfields redevelopment grants for 2005–18. We scale federal investment by the number of households.</li>
-            <li><b>Overall:</b> The sum of all the above types of investment, scaled by the number of households. </li>
+            <li><b>Single-family:</b> This category includes purchase loans for owner-occupied single-family properties of one to four units, as reported by Home Mortgage Disclosure Act data for 2005–19. We scale single-family investment by the number of owner-occupied households so we can make apples-to-apples comparisons across places and across neighborhoods within a place. </li>
+            <li><b>Multifamily:</b> This category includes purchase loans for multifamily properties of five or more units, as reported by Home Mortgage Disclosure Act data for 2005–19. We scale multifamily investment by the number of renter-occupied households living in properties with five or more units. </li>
+            <li><b>Nonresidential:</b> This category includes loans for nonresidential real estate (e.g., commercial, industrial, and agricultural properties), as tracked by CoreLogic for 2005–18. We scale nonresidential investment by the number of employees working in the area. </li>
+            <li><b>Small business:</b> This category includes small-business loans, as measured by loans to businesses with revenues below $1 million, reported by bank lenders pursuant to Community Reinvestment Act requirements for 2005–19 and as measured by Small Business Administration guaranteed lending through the 7(a) and 504 programs. We scale small-business investment by the number of small-business employees. </li>
+            <li><b>Mission:</b> This category includes “mission lending” reported by community development financial institutions (CDFIs) and other socially motivated lenders, compiled from various data sources, including transaction-level reports from the CDFI Fund, data reported to the Opportunity Finance Network, mission loans identified in CoreLogic datasets, and investments under the New Markets Tax Credit program; data are for 2005–18. We scale mission investment by the number of households.</li>
+            <li><b>Federal:</b> This category includes federal community development funding, including the US Department of Housing and Urban Development HOME Investment Partnerships Program, Community Development Block Grant Program, Section 108, Choice Neighborhoods, and HOPE VI Public and Indian Housing and Main Street grants; Low-Income Housing Tax Credit investments; and US Environmental Protection Agency brownfields and brownfields redevelopment grants for 2005–18. We scale federal investment by the number of households.</li>
+            <li><b>Overall:</b> This category includes the sum of all the above types of investment, scaled by the number of households. </li>
           </ul>
       </p>
       <p>
-        We ranked the scaled investment volume for each city among the 500 largest cities, for each county among the 500 largest counties, and for each state among all 50 states and Washington, DC (excluding data from very small counties in those states). We presented how those places compare with their peers in percentiles between 1 and 100 for each investment category and overall; higher percentiles mean more investment.
+        We ranked the scaled investment volume for each city among the 500 largest cities, for each county among the 500 largest counties, and for each state among all 50 states and Washington, DC (excluding data from very small counties in those states). Using percentiles between 1 and 100, we presented how each city, county, and state compared with its peers on the racial/ethnic and income equity of investments, for each category and overall.
       </p>
       <p>
         To evaluate how equitably investment is distributed across neighborhoods within each city, county, and state, we ran a statistical regression analysis of how strongly neighborhood race/ethnicity demographics and poverty rates relate to the scaled amount of investment they receive. For example, in a city where having a high neighborhood poverty rate strongly predicts that the neighborhood will receive a low amount of investment, we say there are income-associated investment disparities in that city. In a city where having a large share of people of color in a neighborhood strongly predicts that the neighborhood will receive a low amount of investment, we say there are racial/ethnic investment disparities in that city. We presented how each city’s, county’s, and state’s investment compared with its peers in racial/ethnic and income equity in percentiles between 1 and 100 for each investment category and overall; higher percentiles mean more equitable investment.
       </p>
       <p>
-        Because a neighborhood’s racial/ethnic and income composition changes over time, we used multiple years of Census demographic and income data to analyze investment trends, looking at the demographics of the neighborhood during the year the investment occurred. We included racial/ethnic groups in a city, county, or state’s regression where those demographic groups make up at least 5 percent of the population in at least 20 tracts within that place. We trimmed the top 3 percent of outlier scaled investment flows before calculating regression results for race/ethnicity and income equity.
+        Because a neighborhood’s racial/ethnic and income composition changes over time, we used multiple years of census demographic and income data to analyze investment trends, looking at the demographics of the neighborhood during the year the investment occurred. We included racial/ethnic groups in a city, county, or state’s regression where those demographic groups make up at least 5 percent of the population in at least 20 tracts within that place. We trimmed the top 3 percent of outlier-scaled investment flows before calculating regression results for race/ethnicity and income equity.
       </p>
       <p>
         For more information about this analysis, contact <a href="mailto:externalaffairs@urban.org">externalaffairs@urban.org</a>.
@@ -161,7 +162,7 @@
 
       <h4>Project credits</h4>
       <div class="urbanstatement"><p>
-        This feature was funded by <a href="https://kresge.org/" target="_blank" title="">Kresge Foundation</a> through the <a href="https://www.sharedprosperitypartnership.org/" target="_blank" title="">Shared Prosperity Partnership</a>. We are grateful to them and to all our funders, who make it possible for Urban to advance its mission. The views expressed are those of the authors and should not be attributed to the Urban Institute, its trustees, or its funders. Funders do not determine research findings or the insights and recommendations of our experts. More information on our funding principles is available <a href="https://www.urban.org/support/funding-principles" target="_blank" title="">here</a>. Read our terms of service <a href="https://www.urban.org/terms-service" target="_blank" title="">here</a>.
+        This feature was funded by the <a href="https://kresge.org/" target="_blank" title="">Kresge Foundation</a> through the <a href="https://www.sharedprosperitypartnership.org/" target="_blank" title="">Shared Prosperity Partnership</a>. We are grateful to them and to all our funders, who make it possible for Urban to advance its mission. The views expressed are those of the authors and should not be attributed to the Urban Institute, its trustees, or its funders. Funders do not determine research findings or the insights and recommendations of our experts. More information on our funding principles is available <a href="https://www.urban.org/support/funding-principles" target="_blank" title="">here</a>. Read our terms of service <a href="https://www.urban.org/terms-service" target="_blank" title="">here</a>.
       </p></div>
 
       <h3 class="job">Research</h3>

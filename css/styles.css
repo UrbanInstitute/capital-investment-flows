@@ -38,7 +38,7 @@ h3 {
 p {
   font-size: 20px;
   line-height: 1.6;
-  margin: 40px 0;
+  margin: 28px 0;
 }
 
 .clear {
@@ -71,7 +71,7 @@ p {
 
 .text-wrapper {
   padding-top: 56px;
-  margin: 0 auto 100px auto;
+  margin: 0 auto 80px auto;
   max-width: 1150px;
   width: 80%;
 }
@@ -718,16 +718,21 @@ li.geo-type.selected {
 }
 
 .viz-well > p {
-  color: #696969;
+/*  color: #696969;*/
   font-size: 18px;
 /*  margin: 8px 0 42px 0;*/
 }
 
 .viz-well > p.use-note {
   color: #353535;
-  margin: 42px auto;
-  max-width: 760px;
+  line-height: 1.3;
+  margin: 42px auto 4px auto;
   text-align: center;
+}
+
+.viz-well > p.ptile-note {
+  text-align: center;
+  margin: 0 0 42px 0;
 }
 
 @media (min-width: 1320px){
@@ -785,6 +790,10 @@ li.geo-type.selected {
 
   tr.flow-type > td {
     height: 40px;
+  }
+
+  .viz-well > p.use-note {
+    max-width: 540px;
   }
 }
 
@@ -946,6 +955,10 @@ li.geo-type.selected {
     border-bottom: 2px solid #D2D2D2;
   }
 
+  .text-wrapper {
+    margin-bottom: 60px;
+  }
+
   .viz-well {
     width: 90%;
   }
@@ -971,6 +984,10 @@ li.geo-type.selected {
 
   rect.pctl-box {
     stroke-width: 0.5;
+  }
+
+  .text-wrapper {
+    margin-bottom: 40px;
   }
 }
 

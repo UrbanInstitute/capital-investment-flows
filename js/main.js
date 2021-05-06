@@ -161,9 +161,9 @@
 
     function updateText(){
       var useNote = {
-        'city': 'Search for a city to see how its investment patterns compare among other cities',
-        'county': 'Search for a county to see how its investment patterns compare among other counties',
-        'state': 'Search for a state to see how its investment patterns compare among other states'
+        'city': 'Search for a city to see how its investment patterns compare with those of other cities',
+        'county': 'Search for a county to see how its investment patterns compare with those of other counties',
+        'state': 'Search for a state to see how its investment patterns compare with those of other states'
       }
 
       var dataNotes = {
