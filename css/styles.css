@@ -702,7 +702,7 @@ li.geo-type.selected {
   text-align: center;
 }
 
-#share-btns > img {
+#share-btns > a > img {
   margin-right: 16px;
   width: 24px;
 }
