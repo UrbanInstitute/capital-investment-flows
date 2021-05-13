@@ -21,22 +21,53 @@
     stickyNav();
   })
 
-  var NAV_OFFSET_TOP = $('nav').offset().top - 250; //store the value because it becomes fixed at 0 later
+
+  var pinnedHeaderOffset = IS_MOBILE ? 120 : 56;
+  var NAV_OFFSET_TOP = $('nav').offset().top - pinnedHeaderOffset; //store the value because it becomes fixed at 0 later
   function stickyNav(){
-    // if (IS_MOBILE){
+
       var topNavHeight = $('div.title').outerHeight();
       var scrollPosition = $(window).scrollTop() + topNavHeight;
-      if ( scrollPosition >= NAV_OFFSET_TOP ){
-        $('nav').addClass('sticky')
-      } else if ( scrollPosition < NAV_OFFSET_TOP ) {
-        $('nav').removeClass('sticky')
+      
+      if (IS_MOBILE){
+        $('nav').removeClass('sticky') 
+        $('#header-pinned').css('position', 'fixed') 
+        if ( scrollPosition >= NAV_OFFSET_TOP ){
+          $('nav > div > ul').addClass('sticky')
+        } else if ( scrollPosition < NAV_OFFSET_TOP ) {
+          $('nav > div > ul').removeClass('sticky')          
+        }
+      } else {
+        $('nav > div > ul').removeClass('sticky')
+        if ( scrollPosition >= NAV_OFFSET_TOP ){
+          $('nav').addClass('sticky')
+          $('#header-pinned').css('position', 'static')
+        } else if ( scrollPosition < NAV_OFFSET_TOP ) {
+          $('nav').removeClass('sticky')          
+          $('#header-pinned').css('position', 'fixed')
+        }
       }
-       if ( scrollPosition >= $('footer').offset().top ){
+
+      if ( scrollPosition >= $('footer').offset().top ){
         $('nav').removeClass('sticky')
+        $('nav > div > ul').removeClass('sticky') 
       }
-    // } else {
-    //   $('nav').removeClass('sticky')
-    // }
+
+      // if ( scrollPosition >= NAV_OFFSET_TOP ){
+      //   $('nav').addClass('sticky')
+      //   if (!IS_MOBILE){
+      //    $('#header-pinned').css('position', 'static')
+      //   }
+      // } else if ( scrollPosition < NAV_OFFSET_TOP ) {
+      //   $('nav').removeClass('sticky')
+      //   if (!IS_MOBILE){
+      //     $('#header-pinned').css('position', 'fixed')
+      //   }
+      // }
+      //  if ( scrollPosition >= $('footer').offset().top ){
+      //   $('nav').removeClass('sticky')
+      // }
+
   }
 
   function dataReady(error, cityNums, countyNums, stateNums, dict){

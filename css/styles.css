@@ -197,7 +197,7 @@ p {
     left: 0;
     position: fixed;
     top: 0px;
-    transition: top 0.25s linear;
+    transition: top 0.3s ease;
     width: 100%;
     z-index: 999;
     -webkit-transition: top 0.25s linear;
@@ -545,7 +545,7 @@ label {
   display: inline-block;
   padding-left: 18px;
   text-align: left;
-  width: 230px;
+  width: 370px;
     /*width: calc(100% - 288px - 18px - 276px - 270px);*/
 }
 
@@ -556,8 +556,7 @@ label {
   font-style: italic;
   line-height: 1.2;
   margin: 0;
-  position: relative;
-  top: 10px;
+  vertical-align: middle;
 }
 
 .quintile-dial {
@@ -634,7 +633,7 @@ label {
 }
 
 #tabs > div.wrapper {
-  padding: 27px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -688,15 +687,24 @@ nav#tabs {
 nav#tabs.sticky {
   left: 0;
   position: fixed;
-  top: 56px;
+  top: 0;
   width: 100%;
   z-index: 2;
-
-  transition: top 0.3s ease;
+  transition: top 0.1s ease;
 }
 
 nav#tabs.sticky > div.wrapper {
   text-align: left;
+}
+
+nav#tabs > div > ul.sticky {
+  background-color: #FFFFFF;
+  left: 0;
+  position: fixed;
+  top: 56px;
+  width: 100%;
+  z-index: 2;
+  transition: top 0.3s ease;
 }
 
 .mobile-caption {
@@ -776,7 +784,11 @@ li.geo-type.selected {
   }
 }
 
-
+@media (max-width: 1200px){
+  .results-table > p {
+    height: 108px;
+  }
+}
 
 @media (max-width: 1175px){
 
@@ -799,14 +811,12 @@ li.geo-type.selected {
   }
 }
 
-@media (max-width: 1200px){
-  .results-table > p {
-    height: 108px;
-  }
-}
-
-
 @media (max-width: 1015px){
+
+  #place-search div.note-wrapper {
+    width: 280px;
+  }
+
   .results-table > p {
     font-size: 16px;
 
@@ -815,6 +825,15 @@ li.geo-type.selected {
 }
 
 @media (max-width: 950px){
+
+  #place-search div.note-wrapper {
+    width: 190px;
+  }
+
+    #place-search div.note-wrapper > p.availability-note {
+    font-size: 14px;
+  }
+
   .results-table > p {
     font-size: 16px;
   }
@@ -924,6 +943,10 @@ li.geo-type.selected {
     position: relative;
     top: 2px;
     width: 95px;
+  }
+
+  nav#tabs.sticky {
+    top: 56px;
   }
 
   #place-search {
