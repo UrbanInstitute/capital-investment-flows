@@ -21,9 +21,9 @@
     stickyNav();
   })
 
-  var NAV_OFFSET_TOP = $('nav').offset().top; //store the value because it becomes fixed at 0 later
+  var NAV_OFFSET_TOP = $('nav').offset().top - 250; //store the value because it becomes fixed at 0 later
   function stickyNav(){
-    if (IS_MOBILE){
+    // if (IS_MOBILE){
       var topNavHeight = $('div.title').outerHeight();
       var scrollPosition = $(window).scrollTop() + topNavHeight;
       if ( scrollPosition >= NAV_OFFSET_TOP ){
@@ -34,9 +34,9 @@
        if ( scrollPosition >= $('footer').offset().top ){
         $('nav').removeClass('sticky')
       }
-    } else {
-      $('nav').removeClass('sticky')
-    }
+    // } else {
+    //   $('nav').removeClass('sticky')
+    // }
   }
 
   function dataReady(error, cityNums, countyNums, stateNums, dict){
@@ -167,8 +167,8 @@
       }
 
       var dataNotes = {
-        'city': 'Data are available for the 500 largest US cities',
-        'county': 'Data are available for the 500 largest US counties',
+        'city': 'Data are available for the 250 largest US cities',
+        'county': 'Data are available for the 250 largest US counties',
         'state': 'Data are available for all 50 states and Washington, DC'
       }
 
@@ -310,7 +310,6 @@
 
     function init(){
       IS_MOBILE = document.body.clientWidth < 800 ? true : false;
-      console.log(IS_MOBILE)
       makeMenu(cityNums);
       makeTables();
       highlightMeasure('click');
