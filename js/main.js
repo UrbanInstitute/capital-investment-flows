@@ -23,11 +23,10 @@
 
 
 
-  var NAV_OFFSET_TOP = $('nav').offset().top - 56; //store the value because it becomes fixed at 0 later
+  var NAV_OFFSET_TOP = $('#position-finder').offset().top - 60; //store the value because finding it every time gets blinky
   function stickyNav(){
 
-      var topNavHeight = $('div.title').outerHeight();
-      var scrollPosition = $(window).scrollTop() + topNavHeight;
+      var scrollPosition = $(window).scrollTop()
 
       if (IS_MOBILE){
         $('nav').removeClass('sticky')
@@ -52,22 +51,6 @@
         $('nav').removeClass('sticky')
         $('nav > div > ul').removeClass('sticky')
       }
-
-      // if ( scrollPosition >= NAV_OFFSET_TOP ){
-      //   $('nav').addClass('sticky')
-      //   if (!IS_MOBILE){
-      //    $('#header-pinned').css('position', 'static')
-      //   }
-      // } else if ( scrollPosition < NAV_OFFSET_TOP ) {
-      //   $('nav').removeClass('sticky')
-      //   if (!IS_MOBILE){
-      //     $('#header-pinned').css('position', 'fixed')
-      //   }
-      // }
-      //  if ( scrollPosition >= $('footer').offset().top ){
-      //   $('nav').removeClass('sticky')
-      // }
-
   }
 
   function dataReady(error, cityNums, countyNums, stateNums, dict){
@@ -360,7 +343,13 @@
     d3.select(window).on('resize', resize);
 
     function resize(){
+
       IS_MOBILE = $(window).width() < 800 ? true : false;
+
+
+      NAV_OFFSET_TOP = $('#position-finder').offset().top - 60;
+
+
       if (IS_MOBILE){
         makeTables();
         $('#investment-cat').val(SELECTED_MEASURE);

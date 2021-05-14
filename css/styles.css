@@ -110,7 +110,11 @@ p {
   font-size: 24px;
   height: 38px;
   margin-left: 18px;
+  overflow: hidden;
   padding-left: 16px;
+  padding-right: 40px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   width: 276px;
 }
 
@@ -126,6 +130,10 @@ p {
 
 .ui-selectmenu-text {
   color: #353535;
+}
+
+.ui-widget.ui-widget-content {
+  z-index: 1050 !important;
 }
 
 /*#combobox {
@@ -682,7 +690,9 @@ tr.selected > td, tr.moused > td {
 }
 
 nav#tabs {
-  top: 60px;
+  position: relative;
+  top: 0;
+  z-index: 1001;
 }
 
 nav#tabs.sticky {
@@ -691,7 +701,7 @@ nav#tabs.sticky {
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: top 0.1s ease;
+  transition: top 0.3s ease;
 }
 
 nav#tabs.sticky > div.wrapper {
@@ -717,7 +727,7 @@ li.geo-type {
   color: #1696d2;
   font-size: 18px;
   font-weight: 700;
-  padding: 6px;
+  padding: 6px 12px;
   text-transform: uppercase;
 }
 
@@ -944,6 +954,10 @@ li.geo-type.selected {
     position: relative;
     top: 2px;
     width: 95px;
+  }
+
+  nav#tabs {
+    z-index: 1;
   }
 
   nav#tabs.sticky {
