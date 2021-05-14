@@ -33,8 +33,10 @@
         $('#header-pinned').css('position', 'fixed')
         if ( scrollPosition >= NAV_OFFSET_TOP ){
           $('nav > div > ul').addClass('sticky')
+          $('#place-search').css('margin-top', 90)
         } else if ( scrollPosition < NAV_OFFSET_TOP ) {
           $('nav > div > ul').removeClass('sticky')
+          $('#place-search').css('margin-top', 0)
         }
       } else {
         $('nav > div > ul').removeClass('sticky')
