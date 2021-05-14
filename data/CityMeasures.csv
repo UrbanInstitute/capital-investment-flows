@@ -1,4 +1,4 @@
-﻿NAME_E,id,stateabrev,pctlVolume_SF,pctlVolume_federal,pctlVolume_agg,pctlVolume_MF,pctlVolume_NonRes,pctlVolume_SB,pctlVolume_mission,pctlrace_agg,pctlrace_SF,pctlrace_MF,pctlrace_SB,pctlrace_mission,pctlrace_federal,pctlrace_NonRes,pctlpov_agg,pctlpov_SF,pctlpov_mission,pctlpov_federal,pctlpov_NonRes,pctlpov_SB,pctlpov_MF
+NAME_E,id,stateabrev,pctlVolume_SF,pctlVolume_mission,pctlVolume_agg,pctlVolume_MF,pctlVolume_NonRes,pctlVolume_SB,pctlVolume_federal,pctlrace_agg,pctlrace_SF,pctlrace_MF,pctlrace_SB,pctlrace_federal,pctlrace_mission,pctlrace_NonRes,pctlpov_agg,pctlpov_SF,pctlpov_federal,pctlpov_mission,pctlpov_NonRes,pctlpov_SB,pctlpov_MF
 "Chicago, IL",1714000,IL,58,75,55,38,78,47,90,70,46,68,77,23,81,85,46,31,87,30,49,21,5
 "New York, NY",3651000,NY,69,79,47,49,33,6,78,90,81,80,88,57,61,80,68,57,72,35,85,75,51
 "Los Angeles, CA",0644000,CA,93,70,84,91,75,50,84,31,20,79,53,32,32,53,28,11,85,77,89,36,63

@@ -1,4 +1,4 @@
-﻿NAME_E,id,pctlVolume_SF,pctlVolume_federal,pctlVolume_agg,pctlVolume_MF,pctlVolume_NonRes,pctlVolume_SB,pctlVolume_mission,pctlrace_agg,pctlrace_SF,pctlrace_MF,pctlrace_SB,pctlrace_mission,pctlrace_federal,pctlrace_NonRes,pctlpov_agg,pctlpov_SF,pctlpov_mission,pctlpov_federal,pctlpov_NonRes,pctlpov_SB,pctlpov_MF
+NAME_E,id,pctlVolume_SF,pctlVolume_mission,pctlVolume_agg,pctlVolume_MF,pctlVolume_NonRes,pctlVolume_SB,pctlVolume_federal,pctlrace_agg,pctlrace_SF,pctlrace_MF,pctlrace_SB,pctlrace_federal,pctlrace_mission,pctlrace_NonRes,pctlpov_agg,pctlpov_SF,pctlpov_federal,pctlpov_mission,pctlpov_NonRes,pctlpov_SB,pctlpov_MF
 Illinois,17,56,46,64,40,92,48,68,86,70,72,90,28,78,20,50,52,86,36,86,14,50
 Alabama,01,18,18,14,38,10,92,18,84,76,90,48,80,84,90,32,20,14,28,6,26,18
 Alaska,02,78,10,76,6,66,98,50,62,18,48,80,62,76,4,4,2,30,34,2,18,16

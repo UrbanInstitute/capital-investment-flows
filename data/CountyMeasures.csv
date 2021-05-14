@@ -1,4 +1,4 @@
-﻿NAME_E,id,pctlVolume_SF,pctlVolume_federal,pctlVolume_agg,pctlVolume_MF,pctlVolume_NonRes,pctlVolume_SB,pctlVolume_mission,pctlrace_agg,pctlrace_SF,pctlrace_MF,pctlrace_SB,pctlrace_mission,pctlrace_federal,pctlrace_NonRes,pctlpov_agg,pctlpov_SF,pctlpov_mission,pctlpov_federal,pctlpov_NonRes,pctlpov_SB,pctlpov_MF
+NAME_E,id,pctlVolume_SF,pctlVolume_mission,pctlVolume_agg,pctlVolume_MF,pctlVolume_NonRes,pctlVolume_SB,pctlVolume_federal,pctlrace_agg,pctlrace_SF,pctlrace_MF,pctlrace_SB,pctlrace_federal,pctlrace_mission,pctlrace_NonRes,pctlpov_agg,pctlpov_SF,pctlpov_federal,pctlpov_mission,pctlpov_NonRes,pctlpov_SB,pctlpov_MF
 "Cook County, IL",17031,52,70,55,29,86,46,88,68,55,70,79,14,78,31,79,82,96,38,83,28,44
 "Los Angeles County, CA",06037,92,63,85,97,59,43,85,65,63,44,80,29,52,53,55,54,85,69,87,58,81
 "Harris County, TX",48201,50,51,44,19,50,70,31,47,38,83,53,86,73,60,26,17,22,35,46,39,35
