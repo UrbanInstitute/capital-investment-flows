@@ -103,12 +103,12 @@ p {
   background: url(../img/lookup.png) 96% / 15% no-repeat #f5f5f5;
   background-size: auto;
   border: none;
-  border-bottom: 2px solid #1696D2;
+  border-bottom: 2px solid #FDBF11;
   border-radius: 0;
   color: #353535;
   font-family: Lato;
-  font-size: 20px;
-  height: 44px;
+  font-size: 24px;
+  height: 38px;
   margin-left: 18px;
   padding-left: 16px;
   width: 276px;
@@ -645,6 +645,7 @@ label {
 }
 
 #tabs > div > ul > li {
+  cursor: pointer;
   display: inline;
 }
 
@@ -689,7 +690,7 @@ nav#tabs.sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1000;
   transition: top 0.1s ease;
 }
 
@@ -716,7 +717,7 @@ li.geo-type {
   color: #1696d2;
   font-size: 18px;
   font-weight: 700;
-  padding: 12px;
+  padding: 6px;
   text-transform: uppercase;
 }
 

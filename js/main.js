@@ -22,20 +22,20 @@
   })
 
 
-  var pinnedHeaderOffset = IS_MOBILE ? 120 : 56;
-  var NAV_OFFSET_TOP = $('nav').offset().top - pinnedHeaderOffset; //store the value because it becomes fixed at 0 later
+
+  var NAV_OFFSET_TOP = $('nav').offset().top - 56; //store the value because it becomes fixed at 0 later
   function stickyNav(){
 
       var topNavHeight = $('div.title').outerHeight();
       var scrollPosition = $(window).scrollTop() + topNavHeight;
-      
+
       if (IS_MOBILE){
-        $('nav').removeClass('sticky') 
-        $('#header-pinned').css('position', 'fixed') 
+        $('nav').removeClass('sticky')
+        $('#header-pinned').css('position', 'fixed')
         if ( scrollPosition >= NAV_OFFSET_TOP ){
           $('nav > div > ul').addClass('sticky')
         } else if ( scrollPosition < NAV_OFFSET_TOP ) {
-          $('nav > div > ul').removeClass('sticky')          
+          $('nav > div > ul').removeClass('sticky')
         }
       } else {
         $('nav > div > ul').removeClass('sticky')
@@ -43,14 +43,14 @@
           $('nav').addClass('sticky')
           $('#header-pinned').css('position', 'static')
         } else if ( scrollPosition < NAV_OFFSET_TOP ) {
-          $('nav').removeClass('sticky')          
+          $('nav').removeClass('sticky')
           $('#header-pinned').css('position', 'fixed')
         }
       }
 
       if ( scrollPosition >= $('footer').offset().top ){
         $('nav').removeClass('sticky')
-        $('nav > div > ul').removeClass('sticky') 
+        $('nav > div > ul').removeClass('sticky')
       }
 
       // if ( scrollPosition >= NAV_OFFSET_TOP ){
