@@ -346,7 +346,6 @@
 
       IS_MOBILE = $(window).width() < 800 ? true : false;
 
-
       NAV_OFFSET_TOP = $('#position-finder').offset().top - 60;
 
 

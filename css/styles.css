@@ -115,7 +115,7 @@ p {
   padding-right: 40px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 276px;
+  width: 246px;
 }
 
 #investment-cat-button {
@@ -878,12 +878,13 @@ li.geo-type.selected {
     font-size: 16px;
     height: 42px;
     margin-left: 0;
+    padding-right: 0;
     width: 90%;
   }
 
   #investment-cat-button {
     /*something making this not match the other 90%*/
-    width: 93%;
+    width: 95%;
   }
 
   h1 {
