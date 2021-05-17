@@ -21,8 +21,6 @@
     stickyNav();
   })
 
-
-
   var NAV_OFFSET_TOP = $('#position-finder').offset().top - 60; //store the value because finding it every time gets blinky
   function stickyNav(){
 
@@ -30,7 +28,7 @@
 
       if (IS_MOBILE){
         $('nav').removeClass('sticky')
-        $('#header-pinned').css('position', 'fixed')
+        // $('#header-pinned').css('position', 'fixed')
         if ( scrollPosition >= NAV_OFFSET_TOP ){
           $('nav > div > ul').addClass('sticky')
           $('#place-search').css('margin-top', 90)
@@ -42,10 +40,10 @@
         $('nav > div > ul').removeClass('sticky')
         if ( scrollPosition >= NAV_OFFSET_TOP ){
           $('nav').addClass('sticky')
-          $('#header-pinned').css('position', 'static')
+          // $('#header-pinned').css('position', 'static')
         } else if ( scrollPosition < NAV_OFFSET_TOP ) {
           $('nav').removeClass('sticky')
-          $('#header-pinned').css('position', 'fixed')
+          // $('#header-pinned').css('position', 'fixed')
         }
       }
 
@@ -324,6 +322,21 @@
 
     }
 
+    function resizeNoteWrapper(){
+      var inputMargin = 18,
+          notePadding = 18,
+          tabsPadding = 10 * 2,
+          segButtonsWidth = $('.wrapper > ul').outerWidth(),
+          inputWidth = $('#combobox').outerWidth() + inputMargin,
+          tabsWidth = $('#tabs').outerWidth() - tabsPadding,
+          noteWidth = 380,
+          availableSpace = tabsWidth - inputWidth - segButtonsWidth - notePadding - tabsPadding
+
+        var newNoteWidth = noteWidth > availableSpace ? availableSpace : noteWidth;
+
+        $('.note-wrapper').css('width', newNoteWidth)
+    }
+
     function init(){
       IS_MOBILE = document.body.clientWidth < 800 ? true : false;
       makeMenu(cityNums);
@@ -336,6 +349,8 @@
       if (IS_MOBILE) {
         $('#investment-cat').val(SELECTED_MEASURE);
         $('#investment-cat').selectmenu('refresh');
+      } else {
+        resizeNoteWrapper();
       }
 
     }
@@ -355,6 +370,8 @@
         makeTables();
         $('#investment-cat').val(SELECTED_MEASURE);
         $('#investment-cat').selectmenu('refresh');
+      } else {
+        resizeNoteWrapper();
       }
       stickyNav();
       highlightMeasure();
