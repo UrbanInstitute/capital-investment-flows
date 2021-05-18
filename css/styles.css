@@ -560,7 +560,7 @@ label {
 #place-search div.note-wrapper > p.availability-note {
   color: #696969;
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
   line-height: 1.2;
   margin: 0;
@@ -884,7 +884,7 @@ li.geo-type.selected {
 
   #investment-cat-button {
     /*something making this not match the other 90%*/
-    width: 95%;
+    width: 93%;
   }
 
   h1 {
@@ -1070,6 +1070,7 @@ li.geo-type.selected {
   }
 
   .viz-well {
+    padding: 0;
     width: 90%;
   }
 

@@ -7,7 +7,7 @@
     .defer(d3.csv, 'data/DataDictionary.csv')
     .await(dataReady);
 
-  var IS_MOBILE = document.body.clientWidth < 800 ? true : false;
+  var IS_MOBILE = document.body.clientWidth < 830 ? true : false;
 
   d3.selectAll('.arc').on('mouseenter', function(){
     var num = d3.select(this).attr('data-range')
@@ -186,7 +186,7 @@
         'state': 'Data are available for all 50 states and Washington, DC'
       }
 
-      d3.select('.availability-note').text(dataNotes[GEOG_LEVEL]);
+      d3.select('.availability-note').html(dataNotes[GEOG_LEVEL]);
       d3.select('#place-search > label > span').text(GEOG_LEVEL);
       d3.select('div.viz-well > p.use-note > b').text(useNote[GEOG_LEVEL]);
       d3.select('#pctlVolume > p > span').text(GEOG_LEVEL);
@@ -338,7 +338,7 @@
     }
 
     function init(){
-      IS_MOBILE = document.body.clientWidth < 800 ? true : false;
+      IS_MOBILE = document.body.clientWidth < 830 ? true : false;
       makeMenu(cityNums);
       makeTables();
       highlightMeasure('click');
@@ -361,7 +361,7 @@
 
     function resize(){
 
-      IS_MOBILE = $(window).width() < 800 ? true : false;
+      IS_MOBILE = $(window).width() < 830 ? true : false;
 
       NAV_OFFSET_TOP = $('#position-finder').offset().top - 60;
 
@@ -370,6 +370,8 @@
         makeTables();
         $('#investment-cat').val(SELECTED_MEASURE);
         $('#investment-cat').selectmenu('refresh');
+
+         $('.note-wrapper').css('width', '100%')
       } else {
         resizeNoteWrapper();
       }
